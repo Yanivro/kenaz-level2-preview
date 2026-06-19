@@ -1,0 +1,14 @@
+# Full-res source photos — the page serves the optimized copies in assets/kenaz/opt/
+assets/kenaz/*.jpg
+assets/kenaz/*.png
+!assets/kenaz/6247a7dbbd6a4724bd88197664e0f6dd.png
+
+# Duplicate source copies of the accreditation logos (page uses assets/accreditation/*)
+mqkgwc74-logo-3-2-ibf.svg
+mqkgwc72-GPBA_Logo_Optimized.webp
+
+.DS_Store
+
+# Open Design internal working files — not part of the site
+.od-skills/
+*.artifact.json

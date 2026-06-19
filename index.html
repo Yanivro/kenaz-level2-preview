@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>KENAZ · Level 2 — The Deeper Journey</title>
+<meta name="description" content="For graduates of Level 1, by invitation. Level 2 is the deeper journey — relational, somatic, trauma-aware. Join the waitlist for early access and Super Early Bird pricing." />
+<link rel="icon" href="assets/kenaz/6247a7dbbd6a4724bd88197664e0f6dd.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js')</script>
+<style>
+  :root{
+    --bg:#fafafa;
+    --surface:#ffffff;
+    --fg:#212121;
+    --muted:#737373;
+    --border:#e3e1dc;
+    --hair:#d9d9d9;
+    --accent:#d4af37;
+    --accent-deep:#b8932a;
+    --ink:#1b1b1b;
+    --ink-2:#262626;
+
+    --font:"Raleway","Nunito Sans","Open Sans",-apple-system,system-ui,sans-serif;
+    --maxw:1180px;
+    --pad:clamp(22px,5vw,80px);
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--font);
+    font-weight:300;
+    color:var(--fg);
+    background:var(--bg);
+    line-height:1.65;
+    font-size:clamp(16px,1.05vw,18px);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    overflow-x:hidden;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+
+  /* ---- type helpers ---- */
+  .eyebrow{
+    font-size:clamp(11px,.78vw,12.5px);
+    font-weight:500;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    color:var(--accent-deep);
+    display:inline-block;
+  }
+  .eyebrow.on-dark{color:var(--accent)}
+  h1,h2,h3{font-weight:300;line-height:1.12;letter-spacing:-.01em}
+  h1{font-size:clamp(38px,6.4vw,76px);letter-spacing:-.025em}
+  h2{font-size:clamp(30px,4.2vw,52px);letter-spacing:-.02em}
+  h3{font-size:clamp(20px,2vw,26px)}
+  .lead{font-size:clamp(18px,1.5vw,22px);font-weight:300;color:var(--fg)}
+  .muted{color:var(--muted)}
+  em.cap{font-style:normal;font-weight:500;letter-spacing:.06em}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+  section{padding:clamp(64px,9vw,128px) 0}
+  .rule{height:1px;background:var(--hair);border:0;max-width:var(--maxw);margin:0 auto}
+
+  /* ---- chevron mark ---- */
+  .chev{display:inline-block;vertical-align:middle}
+  .chev svg{display:block}
+  .chev path{fill:none;stroke:var(--accent);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ---- buttons ---- */
+  .btn{
+    display:inline-flex;align-items:center;gap:.7em;
+    font-weight:500;font-size:14px;letter-spacing:.12em;text-transform:uppercase;
+    padding:16px 30px;border-radius:2px;cursor:pointer;border:1px solid var(--fg);
+    background:var(--fg);color:#fff;transition:.4s var(--ease);
+  }
+  .btn:hover{background:transparent;color:var(--fg)}
+  .btn-gold{background:var(--accent);border-color:var(--accent);color:#241d05}
+  .btn-gold:hover{background:transparent;color:var(--accent-deep);border-color:var(--accent)}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+  .btn-ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+  .btn .arr{transition:transform .4s var(--ease)}
+  .btn:hover .arr{transform:translateX(4px)}
+
+  /* ======================= NAV ======================= */
+  .nav{
+    position:fixed;inset:0 0 auto 0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px var(--pad);
+    transition:background .5s var(--ease),padding .5s var(--ease),box-shadow .5s var(--ease);
+  }
+  .nav.scrolled{background:rgba(250,250,250,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--border);padding:12px var(--pad)}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff;transition:color .5s var(--ease)}
+  .nav.scrolled .brand{color:var(--fg)}
+  .brand .wordmark{font-size:20px;letter-spacing:.42em;font-weight:300;padding-left:.42em}
+  .brand .lvl{
+    font-size:10px;letter-spacing:.3em;text-transform:uppercase;
+    padding:3px 8px;border:1px solid currentColor;border-radius:2px;opacity:.85;
+  }
+  .nav .brand .chev path{stroke:var(--accent)}
+  .nav-cta{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;
+    padding:11px 22px;border:1px solid rgba(255,255,255,.6);color:#fff;border-radius:2px;transition:.4s var(--ease)}
+  .nav-cta:hover{background:#fff;color:var(--ink)}
+  .nav.scrolled .nav-cta{border-color:var(--accent);color:var(--accent-deep)}
+  .nav.scrolled .nav-cta:hover{background:var(--accent);color:#241d05}
+
+  /* ======================= HERO ======================= */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding-bottom:clamp(60px,9vh,110px);color:#fff;overflow:hidden}
+  .hero .bg{position:absolute;inset:0;z-index:-2}
+  .hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+  .hero::after{content:"";position:absolute;inset:0;z-index:-1;
+    background:linear-gradient(105deg,rgba(20,17,13,.74) 0%,rgba(20,17,13,.34) 46%,rgba(20,17,13,.12) 70%),
+               linear-gradient(to top,rgba(20,17,13,.7),rgba(20,17,13,0) 42%)}
+  .hero-inner{max-width:var(--maxw);width:100%;margin:0 auto;padding:0 var(--pad)}
+  .hero-col{max-width:780px}
+  .hero h1{margin:.32em 0 .42em;text-wrap:balance}
+  .hero .sub{font-size:clamp(18px,1.7vw,24px);font-weight:300;max-width:42ch;color:rgba(255,255,255,.92)}
+  .hero .intro{margin-top:1.1em;max-width:60ch;color:rgba(255,255,255,.78);font-size:clamp(15px,1.1vw,17px)}
+  .hero-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:2.2em}
+  .hero .micro{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+  .hero .micro b{color:var(--accent);font-weight:500}
+
+  /* breathing scroll cue — the one flourish */
+  .breathe{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:1;
+    display:flex;flex-direction:column;align-items:center;gap:10px;color:rgba(255,255,255,.6)}
+  .breathe .ring{width:30px;height:30px;border:1px solid rgba(212,175,55,.85);border-radius:50%;
+    display:grid;place-items:center;animation:breathe 9s var(--ease) infinite}
+  .breathe .dot{width:5px;height:5px;border-radius:50%;background:var(--accent)}
+  .breathe span{font-size:9.5px;letter-spacing:.34em;text-transform:uppercase}
+  @keyframes breathe{0%,100%{transform:scale(.82);opacity:.55}45%{transform:scale(1.18);opacity:1}55%{transform:scale(1.18);opacity:1}}
+  @media (max-width:560px),(max-height:700px){.breathe{display:none}}
+
+  /* ======================= reveal ======================= */
+  .reveal{transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  .js .reveal{opacity:0;transform:translateY(22px)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.breathe .ring{animation:none}}
+
+  /* ======================= FOR YOU IF ======================= */
+  .split{display:grid;grid-template-columns:1.02fr 1fr;gap:clamp(34px,5vw,76px);align-items:center}
+  .split .media{position:relative}
+  .split .media img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+  .split .media .tag{position:absolute;left:0;bottom:0;background:var(--surface);padding:14px 20px;
+    font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);border-top:2px solid var(--accent)}
+  .section-head{max-width:62ch}
+  .section-head h2{margin:.45em 0 0}
+  .check{list-style:none;margin-top:1.6em;display:grid;gap:1.05em}
+  .check li{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;
+    padding-bottom:1.05em;border-bottom:1px solid var(--border);font-size:clamp(16px,1.15vw,18.5px)}
+  .check li:last-child{border-bottom:0}
+  .check .chev{margin-top:5px}
+
+  /* ======================= DARK QUOTE BAND ======================= */
+  .band-dark{position:relative;color:#fff;background:var(--ink);overflow:hidden}
+  .band-dark .bg{position:absolute;inset:0;z-index:0;opacity:.22}
+  .band-dark .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+  .band-dark::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,18,16,.85),rgba(20,18,16,.55))}
+  .band-dark .wrap{position:relative;z-index:2;max-width:1000px}
+  .band-dark .body{max-width:60ch;color:rgba(255,255,255,.82);margin-top:.4em}
+  .pull{font-size:clamp(26px,3.4vw,44px);font-weight:200;line-height:1.28;letter-spacing:-.01em;
+    margin-top:1.1em;max-width:20ch;text-wrap:balance}
+  .pull b{color:var(--accent);font-weight:300}
+  .quote-mark{font-size:60px;color:var(--accent);line-height:0;display:block;height:.4em}
+
+  /* ======================= JOURNEY ARC ======================= */
+  .arc{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px);margin-top:clamp(40px,5vw,64px)}
+  .arc .step{padding-top:26px;border-top:1px solid var(--hair)}
+  .arc .step .k{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+  .arc .step .k b{font-size:clamp(22px,2.2vw,30px);font-weight:300;letter-spacing:.14em}
+  .arc .step .k .n{font-size:12px;letter-spacing:.2em;color:var(--accent-deep)}
+  .arc .step p{color:var(--muted);font-size:clamp(15px,1.05vw,16.5px)}
+
+  .territory{margin-top:clamp(54px,7vw,90px)}
+  .terr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:2px;overflow:hidden;margin-top:2em}
+  .terr{background:var(--surface);padding:clamp(26px,2.6vw,38px);min-height:200px;display:flex;flex-direction:column;transition:background .4s var(--ease)}
+  .terr:hover{background:#fbfaf6}
+  .terr .n{font-size:13px;letter-spacing:.2em;color:var(--accent-deep);font-weight:500}
+  .terr h3{margin:14px 0 10px;font-size:clamp(19px,1.5vw,22px)}
+  .terr p{color:var(--muted);font-size:15px;line-height:1.6}
+
+  /* ======================= OUTCOMES ======================= */
+  .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,30px);margin-top:clamp(40px,5vw,60px)}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:2px;padding:clamp(28px,2.8vw,40px)}
+  .card .num{font-size:13px;letter-spacing:.2em;color:var(--accent-deep);font-weight:500}
+  .card h3{margin:18px 0 12px}
+  .card p{color:var(--muted);font-size:15.5px}
+
+  /* ======================= ACCREDITATION ======================= */
+  .accredit{padding-top:0}
+  .accredit .inner{
+    border:1px solid var(--border);border-radius:2px;background:var(--surface);
+    padding:clamp(30px,4vw,52px);text-align:center;
+  }
+  .accredit .eyebrow{margin-bottom:14px}
+  .accredit p.line{max-width:46ch;margin:0 auto;color:var(--muted);font-size:clamp(15px,1.05vw,16.5px)}
+  .accredit .logos{
+    display:flex;align-items:center;justify-content:center;flex-wrap:wrap;
+    gap:clamp(34px,6vw,76px);margin-top:clamp(28px,3.4vw,42px);
+  }
+  .accredit .logos .sep{width:1px;height:46px;background:var(--hair)}
+  .accredit .logos img{
+    height:clamp(40px,4.4vw,54px);width:auto;
+    filter:grayscale(1) brightness(.62) contrast(1.05);
+    opacity:.7;transition:filter .5s var(--ease),opacity .5s var(--ease);
+  }
+  .accredit .logos a:hover img{filter:grayscale(1) brightness(.34);opacity:1}
+  .accredit .credential{
+    margin-top:clamp(26px,3vw,38px);padding-top:clamp(22px,2.4vw,30px);border-top:1px solid var(--border);
+    display:inline-flex;align-items:center;gap:12px;
+    font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--fg);
+  }
+  .accredit .credential b{color:var(--accent-deep);font-weight:600}
+
+  /* ======================= SHAPE / FACTS ======================= */
+  .facts-band{position:relative;color:#fff;background:var(--ink-2);overflow:hidden}
+  .facts-band .bg{position:absolute;inset:0;z-index:0;opacity:.3}
+  .facts-band .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+  .facts-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,16,.72),rgba(20,18,16,.82))}
+  .facts-band .wrap{position:relative;z-index:2}
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.14);margin-top:clamp(36px,4vw,52px);border-radius:2px;overflow:hidden}
+  .fact{background:rgba(20,18,16,.35);backdrop-filter:blur(2px);padding:clamp(26px,3vw,40px) clamp(20px,2vw,28px);text-align:center}
+  .fact .big{font-size:clamp(30px,3.6vw,46px);font-weight:200;letter-spacing:.01em;color:#fff}
+  .fact .lbl{margin-top:10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+  .fact .sub{margin-top:6px;font-size:13.5px;color:rgba(255,255,255,.66)}
+
+  /* ======================= FACILITATORS ======================= */
+  .fac-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,3vw,40px);margin-top:clamp(40px,5vw,60px)}
+  .fac{display:grid;grid-template-columns:140px 1fr;gap:26px;align-items:start;
+    background:var(--surface);border:1px solid var(--border);border-radius:2px;padding:clamp(24px,2.4vw,34px)}
+  .portrait{position:relative;overflow:hidden;width:140px;height:170px;border-radius:2px;background:linear-gradient(160deg,#f1efe8,#e7e3d6);
+    border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--accent-deep)}
+  .portrait::before{content:"";position:absolute;inset:0;
+    background:url(assets/kenaz/6247a7dbbd6a4724bd88197664e0f6dd.png) center/74px no-repeat;opacity:.1}
+  .portrait .initials{position:relative;z-index:1;font-size:30px;font-weight:300;letter-spacing:.12em;color:var(--fg);opacity:.55}
+  .portrait .ph{position:relative;z-index:1;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .fac .name{font-size:clamp(21px,1.7vw,25px);font-weight:300}
+  .fac .role{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-deep);margin:8px 0 4px;font-weight:500}
+  .fac .handle{font-size:13px;color:var(--muted)}
+  .fac .bio{margin-top:14px;font-size:15px;color:var(--muted);line-height:1.62}
+
+  /* ======================= EARLY LOOK / SCARCITY ======================= */
+  .earlylook .section-head{max-width:60ch}
+  .badges{display:flex;flex-wrap:wrap;gap:14px;margin-top:2.2em}
+  .badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--hair);border-radius:2px;
+    padding:13px 20px;font-size:13px;letter-spacing:.08em}
+  .badge .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .badge.hl{border-color:var(--accent);background:#fcf9ef;color:var(--fg)}
+  .badge.hl b{color:var(--accent-deep);font-weight:600;letter-spacing:.02em}
+
+  /* ======================= WAITLIST ======================= */
+  .waitlist{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+  .waitlist::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(120% 80% at 50% -10%,rgba(212,175,55,.14),transparent 60%)}
+  .waitlist .wrap{position:relative;z-index:2;max-width:760px;text-align:center}
+  .waitlist h2{margin:.5em 0 .5em}
+  .waitlist .body{color:rgba(255,255,255,.78);max-width:52ch;margin:0 auto}
+  .form{margin:2.4em auto 0;max-width:480px;text-align:left}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:8px}
+  .field input{width:100%;padding:15px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);
+    border-radius:2px;color:#fff;font-family:var(--font);font-size:16px;font-weight:300;transition:.3s var(--ease)}
+  .field input::placeholder{color:rgba(255,255,255,.4)}
+  .field input:focus{outline:none;border-color:var(--accent);background:rgba(255,255,255,.09)}
+  .field input.err{border-color:#d98a6a}
+  .err-msg{display:none;color:#e7a98e;font-size:13px;margin-top:7px;letter-spacing:.02em}
+  .err-msg.show{display:block}
+  .form .btn{width:100%;justify-content:center;margin-top:8px}
+  .form .micro{margin-top:16px;text-align:center;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+  .success{display:none;text-align:center;animation:fade .8s var(--ease)}
+  .success.show{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .success .seal{width:64px;height:64px;border:1px solid var(--accent);border-radius:50%;display:grid;place-items:center;margin:0 auto 22px}
+  .success h3{font-size:clamp(26px,3vw,38px);font-weight:200}
+  .success p{color:rgba(255,255,255,.8);margin-top:14px;max-width:42ch;margin-left:auto;margin-right:auto}
+  .success b{color:var(--accent);font-weight:400}
+
+  /* ======================= FOOTER ======================= */
+  footer{background:var(--ink-2);color:rgba(255,255,255,.7);padding:clamp(48px,6vw,72px) 0}
+  .foot{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
+  .foot .mark{display:flex;align-items:center;gap:14px;color:#fff}
+  .foot .mark .wm{font-size:22px;letter-spacing:.42em;font-weight:200;padding-left:.42em}
+  .foot .tagline{font-size:12px;letter-spacing:.2em;color:var(--accent);margin-top:14px;text-transform:lowercase}
+  .foot .label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+  .foot .contact{font-size:14px;line-height:2;text-align:right}
+  .foot .contact a:hover{color:var(--accent)}
+  .foot-base{max-width:var(--maxw);margin:36px auto 0;padding:24px var(--pad) 0;border-top:1px solid rgba(255,255,255,.1);
+    font-size:12px;letter-spacing:.08em;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  /* ======================= RESPONSIVE ======================= */
+  @media (max-width:880px){
+    .split{grid-template-columns:1fr}
+    .split .media{order:-1}
+    .split .media img{aspect-ratio:16/11}
+    .arc{grid-template-columns:1fr;gap:0}
+    .arc .step{padding:24px 0;border-top:1px solid var(--hair)}
+    .terr-grid{grid-template-columns:1fr 1fr}
+    .cards-3{grid-template-columns:1fr}
+    .facts{grid-template-columns:1fr 1fr}
+    .fac-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    .brand .lvl{display:none}
+    .brand .wordmark{font-size:17px;letter-spacing:.34em}
+    .hero-actions{gap:16px}
+    .hero .btn{width:100%;justify-content:center}
+    .terr-grid{grid-template-columns:1fr}
+    .facts{grid-template-columns:1fr 1fr}
+    .fac{grid-template-columns:1fr}
+    .portrait{width:120px;height:140px}
+    .foot{flex-direction:column}
+    .foot .contact{text-align:left}
+    .accredit .logos{gap:30px}
+    .accredit .logos .sep{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav class="nav" id="nav" data-od-id="nav">
+  <a class="brand" href="#top" aria-label="KENAZ home">
+    <span class="chev" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span>
+    <span class="wordmark">KENAZ</span>
+    <span class="lvl">Level 2</span>
+  </a>
+  <a class="nav-cta" href="#waitlist">Join the waitlist</a>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="top" data-od-id="hero">
+  <div class="bg"><img src="assets/kenaz/opt/hero.jpg" width="2400" height="1350" fetchpriority="high" decoding="async" alt="A woman with her hand on her heart, breathing, eyes closed, outdoors in soft natural light" /></div>
+  <div class="hero-inner">
+    <div class="hero-col">
+      <span class="eyebrow on-dark reveal">For graduates of Level 1 · By invitation</span>
+      <h1 class="reveal d1">You already felt where this&nbsp;goes.</h1>
+      <p class="sub reveal d2">In Level 1, the <em class="cap">BREATH</em> carried you to the edge of something — in yourself, and in those you hold. This is where we go in.</p>
+      <p class="intro reveal d2">This is the <em class="cap">DEEPER</em> journey — for those ready to hold bigger groups, lead their own retreats, and go further with their clients than any training has taken them. A place to meet yourself, honestly, as a leader — and to learn to teach what you carry.</p>
+      <div class="hero-actions reveal d3">
+        <a class="btn btn-gold" href="#waitlist">Get early access <span class="arr">→</span></a>
+        <span class="micro"><b>14 spots</b> · Level 1 graduates only</span>
+      </div>
+    </div>
+  </div>
+  <a class="breathe" href="#for-you" aria-label="Scroll to explore">
+    <span class="ring"><span class="dot"></span></span>
+    <span>breathe</span>
+  </a>
+</header>
+
+<!-- ===================== FOR YOU IF ===================== -->
+<section id="for-you" data-od-id="for-you">
+  <div class="wrap split">
+    <div class="content">
+      <span class="eyebrow reveal">This is for you if…</span>
+      <h2 class="reveal d1" style="margin-top:.4em">You know there's a <em class="cap" style="color:var(--accent-deep)">DEEPER</em> seat waiting for you.</h2>
+      <ul class="check">
+        <li class="reveal"><span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span><span>You're ready to facilitate bigger groups — and hold them well.</span></li>
+        <li class="reveal"><span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span><span>You want to lead your own retreats, not only attend them.</span></li>
+        <li class="reveal"><span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span><span>You want to go deeper with your clients than your training has let you.</span></li>
+        <li class="reveal"><span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span><span>You want to offer a fuller process — a real journey — for the people you serve.</span></li>
+        <li class="reveal"><span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span><span>You're ready to meet yourself, more honestly, as a leader.</span></li>
+        <li class="reveal"><span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span><span>You feel the call to teach others what you carry.</span></li>
+      </ul>
+    </div>
+    <div class="media reveal d2">
+      <img src="assets/kenaz/opt/foryou.jpg" width="1500" height="1000" loading="lazy" decoding="async" alt="Two women in active meditation, eyes closed, moving with the breath" />
+      <span class="tag">Active meditation · KENAZ container</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DARK QUOTE BAND (L1 → L2) ===================== -->
+<section class="band-dark" data-od-id="l1-to-l2">
+  <div class="bg"><img src="assets/kenaz/opt/band-next.jpg" width="1257" height="2000" loading="lazy" decoding="async" alt="" aria-hidden="true" /></div>
+  <div class="wrap">
+    <span class="eyebrow on-dark reveal">The next step</span>
+    <h2 class="reveal d1" style="margin-top:.45em;max-width:18ch">Level 1 gave you the ground. This is the depth.</h2>
+    <p class="body reveal d2">You learned the maps — the breath, the parts, the developmental ground. But the relational and shadow territory got <em class="cap" style="color:var(--accent)">touched</em>, never <em class="cap" style="color:var(--accent)">entered</em>. You feel it with your clients: the moment things move into intimacy, sexuality, or the darker parts, you reach the edge of your own work.</p>
+    <span class="quote-mark reveal" aria-hidden="true">“</span>
+    <p class="pull reveal d1">You can only take someone as deep as you've gone yourself. <b>This is how we go further — together.</b></p>
+  </div>
+</section>
+
+<!-- ===================== THE JOURNEY ===================== -->
+<section id="journey" data-od-id="journey">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow reveal">A taste of the journey</span>
+      <h2 class="reveal d1">Where this takes you.</h2>
+      <p class="lead muted reveal d2" style="margin-top:1em">A trauma-aware, relational deep-dive — beyond adulthood, into the parts of life no one trained you to hold. We move through the KENAZ arc:</p>
+    </div>
+
+    <div class="arc">
+      <div class="step reveal">
+        <div class="k"><b>SEE</b><span class="n">01 · Awareness</span></div>
+        <p>We name what's really running beneath relationship, desire and the shadow.</p>
+      </div>
+      <div class="step reveal d1">
+        <div class="k"><b>FEEL</b><span class="n">02 · Embodiment</span></div>
+        <p>We bring it into the body and the breath — and let it move.</p>
+      </div>
+      <div class="step reveal d2">
+        <div class="k"><b>EMBRACE</b><span class="n">03 · Wholeness</span></div>
+        <p>We dissolve the separation, and come home to all our parts.</p>
+      </div>
+    </div>
+
+    <div class="territory">
+      <span class="eyebrow reveal">The territory we'll move through</span>
+      <div class="terr-grid">
+        <div class="terr reveal"><span class="n">01</span><h3>Relationship &amp; Intimacy</h3><p>The ground after adulthood: how we meet, bond, rupture and repair.</p></div>
+        <div class="terr reveal d1"><span class="n">02</span><h3>Sexuality &amp; Embodiment</h3><p>Embodied experience of the feminine and the masculine, held safely.</p></div>
+        <div class="terr reveal d2"><span class="n">03</span><h3>Shadow Work</h3><p>The shadow of the feminine and masculine; releasing shame.</p></div>
+        <div class="terr reveal"><span class="n">04</span><h3>Archetypes &amp; Psychodrama</h3><p>The inner cast you carry — and how to work it live, in the room, through enactment.</p></div>
+        <div class="terr reveal d1"><span class="n">05</span><h3>Somatic Parts Work</h3><p>IFS-informed parts work and somatic therapy, to apply with clients and to teach.</p></div>
+        <div class="terr reveal d2"><span class="n">06</span><h3>Leadership &amp; Teaching</h3><p>Stepping into the seat of the one who holds — and trains others.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- ===================== OUTCOMES ===================== -->
+<section data-od-id="outcomes">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow reveal">And on the other side</span>
+      <h2 class="reveal d1">Become a facilitator who leads.</h2>
+      <p class="lead muted reveal d2" style="margin-top:1em">Become a Certified Somatic Parts Work Practitioner.</p>
+    </div>
+    <div class="cards-3">
+      <div class="card reveal">
+        <span class="num">01</span>
+        <h3>A recognised title</h3>
+        <p>"Somatic Parts Work Practitioner" — a real way to name, hold and offer your work.</p>
+      </div>
+      <div class="card reveal d1">
+        <span class="num">02</span>
+        <h3>400-hour certification</h3>
+        <p>Accredited via the Breathwork Alliance / IBF, so you can run your own trainings.</p>
+      </div>
+      <div class="card reveal d2">
+        <span class="num">03</span>
+        <h3>Hold bigger groups &amp; retreats</h3>
+        <p>The capacity, and the credential, to step into your own container.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ACCREDITATION ===================== -->
+<section class="accredit" data-od-id="accreditation">
+  <div class="wrap">
+    <div class="inner reveal">
+      <span class="eyebrow">Get accredited</span>
+      <p class="line">A 400-hour certification pathway — recognised by the bodies that hold our field, so the work you offer is named, credentialed and yours to teach.</p>
+      <div class="logos reveal d1">
+        <a href="https://breathworkalliance.com" target="_blank" rel="noopener" aria-label="Global Professional Breathwork Alliance">
+          <img src="assets/accreditation/gpba.webp" alt="Global Professional Breathwork Alliance" loading="lazy" />
+        </a>
+        <span class="sep" aria-hidden="true"></span>
+        <a href="https://ibfbreathwork.org" target="_blank" rel="noopener" aria-label="International Breathwork Foundation">
+          <img src="assets/accreditation/ibf.svg" alt="International Breathwork Foundation" loading="lazy" />
+        </a>
+      </div>
+      <div class="credential reveal d2">
+        <span class="chev" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span>
+        <span>Somatic Parts Work Practitioner · <b>400-Hour Pathway</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SHAPE / FACTS ===================== -->
+<section class="facts-band" data-od-id="shape">
+  <div class="bg"><img src="assets/kenaz/opt/band-facts.jpg" width="2000" height="1125" loading="lazy" decoding="async" alt="" aria-hidden="true" /></div>
+  <div class="wrap">
+    <span class="eyebrow on-dark reveal">The shape of it</span>
+    <h2 class="reveal d1" style="margin-top:.45em">Two weeks together. Six months to integrate.</h2>
+    <div class="facts">
+      <div class="fact reveal"><div class="big">2 Weeks</div><div class="lbl">In person</div><div class="sub">North Thailand</div></div>
+      <div class="fact reveal d1"><div class="big">6 Months</div><div class="lbl">Online</div><div class="sub">Practicum &amp; mentoring</div></div>
+      <div class="fact reveal d2"><div class="big">14 People</div><div class="lbl">Small</div><div class="sub">One deep container</div></div>
+      <div class="fact reveal d3"><div class="big">All-Inclusive</div><div class="lbl">On-site</div><div class="sub">Room + meals together</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FACILITATORS ===================== -->
+<section id="facilitators" data-od-id="facilitators">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow reveal">Held by</span>
+      <h2 class="reveal d1">Two facilitators. One deep container.</h2>
+    </div>
+    <div class="fac-grid">
+      <div class="fac reveal">
+        <div class="portrait" aria-label="Photo of Yaniv Rose coming soon">
+          <span class="initials">YR</span>
+          <span class="ph">Photo to come</span>
+        </div>
+        <div>
+          <div class="name">Yaniv Rose</div>
+          <div class="role">Relational Alchemist</div>
+          <div class="handle">@yaniv_rose_</div>
+          <p class="bio">Certified Authentic Relating Facilitator and L2 Internal Family Systems Practitioner with 5 years' experience, privileged to have empowered thousands in relational wholeness. His mission: forging brave havens for human connection through self-expression and embracing all our parts.</p>
+        </div>
+      </div>
+      <div class="fac reveal d1">
+        <div class="portrait" aria-label="Photo of Kenaz Patricia coming soon">
+          <span class="initials">KP</span>
+          <span class="ph">Photo to come</span>
+        </div>
+        <div>
+          <div class="name">Kenaz — Patricia Udipti</div>
+          <div class="role">Breathwork &amp; Ceremony · Founder of KENAZ</div>
+          <div class="handle">@kenaz.patricia</div>
+          <p class="bio">Brazilian-born, based in Koh Phangan, with 5+ years guiding group work and ceremonies across Europe and Asia. Her lineage in Rebirthing breathwork, bioenergetics, active meditation and energy healing leads groups into deep journeys of transformation — the work behind KENAZ and its 200-hour trauma-aware facilitator training.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EARLY LOOK / SCARCITY ===================== -->
+<section class="earlylook" data-od-id="early-look">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow reveal">An early look</span>
+      <h2 class="reveal d1">This is a preview — not the full map yet.</h2>
+      <p class="lead muted reveal d2" style="margin-top:1em">The full curriculum, dates and details are coming soon. Because you came through Level 1, you get to <em class="cap" style="color:var(--accent-deep)">SEE</em> it first — with priority access and the best pricing before anything opens publicly.</p>
+    </div>
+    <div class="badges reveal d2">
+      <span class="badge"><span class="dot"></span>Only 14 places</span>
+      <span class="badge"><span class="dot"></span>Level 1 graduates only</span>
+      <span class="badge hl"><span class="dot"></span>Super Early Bird · <b>Save 20%</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WAITLIST (conversion) ===================== -->
+<section class="waitlist" id="waitlist" data-od-id="waitlist">
+  <div class="wrap">
+    <div id="form-view">
+      <span class="eyebrow on-dark reveal">Early access</span>
+      <h2 class="reveal d1">Be first to see the full journey.</h2>
+      <p class="body reveal d2">Leave your details and you'll be first to receive the full curriculum, the dates, and your Super Early Bird invitation — before anyone else.</p>
+      <form class="form reveal d2" id="waitlist-form" novalidate>
+        <div class="field">
+          <label for="name">Name <span style="text-transform:none;letter-spacing:0;opacity:.7">(optional)</span></label>
+          <input type="text" id="name" name="name" placeholder="Your first name" autocomplete="given-name" />
+        </div>
+        <div class="field">
+          <label for="email">Email <span style="color:var(--accent)">*</span></label>
+          <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" required />
+          <span class="err-msg" id="email-err">Please enter a valid email so we can reach you.</span>
+        </div>
+        <button type="submit" class="btn btn-gold">Get early access <span class="arr">→</span></button>
+        <p class="micro">For Level 1 graduates · no payment · unsubscribe anytime</p>
+      </form>
+    </div>
+
+    <div class="success" id="success-view" aria-live="polite">
+      <span class="seal" aria-hidden="true"><span class="chev"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span></span>
+      <h3>You're in.</h3>
+      <p id="success-msg">Thank you. As a Level 1 graduate you'll be first to receive the full journey.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer data-od-id="footer">
+  <div class="wrap foot">
+    <div>
+      <div class="mark">
+        <span class="chev" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span>
+        <span class="wm">KENAZ</span>
+      </div>
+      <div class="tagline">awakening self-transformation</div>
+      <div class="label">Level 2 · For Graduates of Level 1</div>
+    </div>
+    <div class="contact">
+      <a href="mailto:info@kenazportal.com">info@kenazportal.com</a><br />
+      <a href="tel:+66655616582">+66 65 561 6582</a><br />
+      <a href="https://instagram.com/kenaz.patricia/" target="_blank" rel="noopener">@kenaz.patricia</a>
+    </div>
+  </div>
+  <div class="foot-base">
+    <span>© 2026 KENAZ · Breathwork for Healing and Transformation</span>
+    <span>Full details coming soon</span>
+  </div>
+</footer>
+
+<script>
+  // ---- nav background on scroll ----
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 40); }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // ---- reveal on scroll (progressive: .reveal only hidden under .js) ----
+  var revealEls = document.querySelectorAll('.reveal');
+  function revealAll(){ revealEls.forEach(function(el){ el.classList.add('in'); }); }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+    // safety net: if anything is still hidden after 3s, show it
+    setTimeout(function(){ revealEls.forEach(function(el){ if(!el.classList.contains('in')) el.classList.add('in'); }); }, 3000);
+  } else {
+    revealAll();
+  }
+
+  // ---- smooth anchor scroll with nav offset ----
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(ev){
+      var id = a.getAttribute('href');
+      if(id.length < 2) return;
+      var t = document.querySelector(id);
+      if(!t) return;
+      ev.preventDefault();
+      var y = t.getBoundingClientRect().top + window.scrollY - 8;
+      window.scrollTo({top: y < 0 ? 0 : y, behavior:'smooth'});
+    });
+  });
+
+  // ---- waitlist form ----
+  var form = document.getElementById('waitlist-form');
+  var emailEl = document.getElementById('email');
+  var emailErr = document.getElementById('email-err');
+  function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); }
+
+  emailEl.addEventListener('input', function(){
+    if(validEmail(emailEl.value)){ emailEl.classList.remove('err'); emailErr.classList.remove('show'); }
+  });
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var email = emailEl.value.trim();
+    if(!validEmail(email)){
+      emailEl.classList.add('err'); emailErr.classList.add('show'); emailEl.focus();
+      return;
+    }
+    var name = document.getElementById('name').value.trim();
+    var first = name ? name.split(' ')[0] : '';
+    var msg = (first ? 'Thank you, ' + first + '. ' : 'Thank you. ') +
+              'As a Level 1 graduate you’ll be first to receive the full journey at ' + email + '.';
+    document.getElementById('success-msg').textContent = msg;
+    document.getElementById('form-view').style.display = 'none';
+    document.getElementById('success-view').classList.add('show');
+    var y = document.getElementById('waitlist').getBoundingClientRect().top + window.scrollY - 8;
+    window.scrollTo({top:y, behavior:'smooth'});
+  });
+</script>
+</body>
+</html>
