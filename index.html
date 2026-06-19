@@ -200,7 +200,14 @@
   .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,30px);margin-top:clamp(40px,5vw,60px)}
   .card{background:var(--surface);border:1px solid var(--border);border-radius:2px;padding:clamp(28px,2.8vw,40px)}
   .card .num{font-size:13px;letter-spacing:.2em;color:var(--accent-deep);font-weight:500}
-  .card h3{margin:18px 0 12px}
+  .card h3{margin:14px 0 12px}
+
+  /* ---- card / territory line-glyphs (replace numeric markers) ---- */
+  .gly{display:block;height:30px}
+  .gly svg{display:block;width:30px;height:30px;overflow:visible}
+  .gly path,.gly circle,.gly line,.gly polyline{
+    fill:none;stroke:var(--accent-deep);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;
+  }
   .card p{color:var(--muted);font-size:15.5px}
 
   /* ======================= ACCREDITATION ======================= */
@@ -237,9 +244,10 @@
   .facts-band .wrap{position:relative;z-index:2}
   .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.14);
     border:1px solid rgba(255,255,255,.14);margin-top:clamp(36px,4vw,52px);border-radius:2px;overflow:hidden}
-  .fact{background:rgba(20,18,16,.35);backdrop-filter:blur(2px);padding:clamp(26px,3vw,40px) clamp(20px,2vw,28px);text-align:center}
-  .fact .big{font-size:clamp(30px,3.6vw,46px);font-weight:200;letter-spacing:.01em;color:#fff}
-  .fact .lbl{margin-top:10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+  .fact{background:rgba(20,18,16,.35);backdrop-filter:blur(2px);padding:clamp(26px,3vw,40px) clamp(20px,2vw,28px);text-align:center;display:flex;flex-direction:column}
+  .fact .big{font-size:clamp(30px,3.6vw,46px);font-weight:200;letter-spacing:.01em;line-height:1.08;color:#fff;
+    min-height:2.16em;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .fact .lbl{margin-top:14px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
   .fact .sub{margin-top:6px;font-size:13.5px;color:rgba(255,255,255,.66)}
 
   /* ======================= FACILITATORS ======================= */
@@ -285,6 +293,9 @@
   .err-msg.show{display:block}
   .form .btn{width:100%;justify-content:center;margin-top:8px}
   .form .micro{margin-top:16px;text-align:center;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+  .form-error{display:none;color:#e7a98e;font-size:13px;margin-top:12px;text-align:center;letter-spacing:.02em}
+  .form-error.show{display:block}
+  .form .btn:disabled{opacity:.55;cursor:default;transform:none}
   .success{display:none;text-align:center;animation:fade .8s var(--ease)}
   .success.show{display:block}
   @keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
@@ -427,12 +438,12 @@
     <div class="territory">
       <span class="eyebrow reveal">The territory we'll move through</span>
       <div class="terr-grid">
-        <div class="terr reveal"><span class="n">01</span><h3>Relationship &amp; Intimacy</h3><p>The ground after adulthood: how we meet, bond, rupture and repair.</p></div>
-        <div class="terr reveal d1"><span class="n">02</span><h3>Sexuality &amp; Embodiment</h3><p>Embodied experience of the feminine and the masculine, held safely.</p></div>
-        <div class="terr reveal d2"><span class="n">03</span><h3>Shadow Work</h3><p>The shadow of the feminine and masculine; releasing shame.</p></div>
-        <div class="terr reveal"><span class="n">04</span><h3>Archetypes &amp; Psychodrama</h3><p>The inner cast you carry, and how to work it live, in the room, through enactment.</p></div>
-        <div class="terr reveal d1"><span class="n">05</span><h3>Somatic Parts Work</h3><p>IFS-informed parts work and somatic therapy, to apply with clients and to teach.</p></div>
-        <div class="terr reveal d2"><span class="n">06</span><h3>Leadership &amp; Teaching</h3><p>Stepping into the seat of the one who holds, and trains others.</p></div>
+        <div class="terr reveal"><span class="gly" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9.5" cy="12" r="5"/><circle cx="14.5" cy="12" r="5"/></svg></span><h3>Relationship &amp; Intimacy</h3><p>The ground after adulthood: how we meet, bond, rupture and repair.</p></div>
+        <div class="terr reveal d1"><span class="gly" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.2C15 6.6 16.6 9.1 16.6 11.6a4.6 4.6 0 0 1-9.2 0C7.4 9.1 9 6.6 12 3.2Z"/></svg></span><h3>Sexuality &amp; Embodiment</h3><p>Embodied experience of the feminine and the masculine, held safely.</p></div>
+        <div class="terr reveal d2"><span class="gly" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15.8 4.2a8 8 0 1 0 0 15.6 6.6 6.6 0 0 1 0-15.6Z"/></svg></span><h3>Shadow Work</h3><p>The shadow of the feminine and masculine; releasing shame.</p></div>
+        <div class="terr reveal"><span class="gly" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="5.6" r="2.2"/><circle cx="6" cy="17.2" r="2.2"/><circle cx="18" cy="17.2" r="2.2"/><path d="M11 7.5 7 15.3M13 7.5 17 15.3M8.2 17.2h7.6"/></svg></span><h3>Archetypes &amp; Psychodrama</h3><p>The inner cast you carry, and how to work it live, in the room, through enactment.</p></div>
+        <div class="terr reveal d1"><span class="gly" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.7"/><circle cx="12" cy="12" r="1.2"/></svg></span><h3>Somatic Parts Work</h3><p>IFS-informed parts work and somatic therapy, to apply with clients and to teach.</p></div>
+        <div class="terr reveal d2"><span class="gly" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20.6v-6.1"/><path d="M9 14.5h6"/><path d="M12 3.2C14.4 5.5 15.5 7.3 15.5 9.4a3.5 3.5 0 0 1-7 0C8.5 7.3 9.6 5.5 12 3.2Z"/></svg></span><h3>Leadership &amp; Teaching</h3><p>Stepping into the seat of the one who holds, and trains others.</p></div>
       </div>
     </div>
   </div>
@@ -450,17 +461,17 @@
     </div>
     <div class="cards-3">
       <div class="card reveal">
-        <span class="num">01</span>
+        <span class="gly" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7C12.4 10.2 13.8 11.6 17 12 13.8 12.4 12.4 13.8 12 17 11.6 13.8 10.2 12.4 7 12 10.2 11.6 11.6 10.2 12 7Z"/></svg></span>
         <h3>A recognised title</h3>
         <p>"Somatic Parts Work Practitioner": a real way to name, hold and offer your work.</p>
       </div>
       <div class="card reveal d1">
-        <span class="num">02</span>
+        <span class="gly" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="M9.2 13.8 7.8 20.6 12 18.2 16.2 20.6 14.8 13.8"/></svg></span>
         <h3>400-hour certification</h3>
         <p>Accredited via the Breathwork Alliance / IBF, so you can run your own trainings.</p>
       </div>
       <div class="card reveal d2">
-        <span class="num">03</span>
+        <span class="gly" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 9.5h17"/><path d="M5 9.5a7 7 0 0 0 14 0"/></svg></span>
         <h3>Hold bigger groups &amp; retreats</h3>
         <p>The capacity, and the credential, to step into your own container.</p>
       </div>
@@ -497,6 +508,7 @@
   <div class="wrap">
     <span class="eyebrow on-dark reveal">The shape of it</span>
     <h2 class="reveal d1" style="margin-top:.45em">Two weeks together. Six months to integrate.</h2>
+    <p class="reveal d1" style="max-width:66ch;margin-top:1.1em;color:rgba(255,255,255,.8);font-size:clamp(15px,1.15vw,17.5px);line-height:1.7">We've redesigned the online structure for Level 2. Where Level 1 kept it light and open, these six months are a structured container: deeper teachings that pick up where the retreat ends, live demonstrations of the work in motion, and regular practice sessions that put you in the facilitator's seat, with feedback from Yaniv and Kenaz, until it becomes how you lead.</p>
     <div class="facts">
       <div class="fact reveal"><div class="big">2 Weeks</div><div class="lbl">In person</div><div class="sub">North Thailand</div></div>
       <div class="fact reveal d1"><div class="big">6 Months</div><div class="lbl">Online</div><div class="sub">Practicum &amp; mentoring</div></div>
@@ -546,9 +558,9 @@
 <section class="earlylook" data-od-id="early-look">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow reveal">An early look</span>
-      <h2 class="reveal d1">This is a preview, not the full map yet.</h2>
-      <p class="lead muted reveal d2" style="margin-top:1em">The full curriculum, dates and details are coming soon. Because you came through Level 1, you get to <em class="cap" style="color:var(--accent-deep)">SEE</em> it first, with priority access and the best pricing before anything opens publicly.</p>
+      <span class="eyebrow reveal">Before the full reveal</span>
+      <h2 class="reveal d1">This one's for the early ones.</h2>
+      <p class="lead muted reveal d2" style="margin-top:1em">The full curriculum, the dates, the details, they're still being shaped. But you came through Level 1, so you already know how we hold a room. If that's enough to say yes, step in now: you're <em class="cap" style="color:var(--accent-deep)">FIRST</em> in line, at the best price, before any of this opens to the public.</p>
     </div>
     <div class="badges reveal d2">
       <span class="badge"><span class="dot"></span>Only 14 places</span>
@@ -566,6 +578,7 @@
       <h2 class="reveal d1">Be first to see the full journey.</h2>
       <p class="body reveal d2">Leave your details and you'll be first to receive the full curriculum, the dates, and your Super Early Bird invitation, before anyone else.</p>
       <form class="form reveal d2" id="waitlist-form" novalidate>
+        <input type="hidden" name="_subject" value="New KENAZ Level 2 waitlist signup" />
         <div class="field">
           <label for="name">Name <span style="text-transform:none;letter-spacing:0;opacity:.7">(optional)</span></label>
           <input type="text" id="name" name="name" placeholder="Your first name" autocomplete="given-name" />
@@ -576,7 +589,8 @@
           <span class="err-msg" id="email-err" role="alert">Please enter a valid email so we can reach you.</span>
         </div>
         <button type="submit" class="btn btn-gold">Get early access <span class="arr">→</span></button>
-        <p class="micro">For Level 1 graduates · no payment · unsubscribe anytime</p>
+        <p class="micro">For Level 1 graduates · No payment · Priority access to Level 2</p>
+        <p class="form-error" id="form-error" role="alert">Something went wrong. Please try again, or email info@kenazportal.com.</p>
       </form>
     </div>
 
@@ -657,6 +671,24 @@
     }
   });
 
+  // ---- Formspree endpoint ----
+  // 1. Create a free form at https://formspree.io  2. Copy its endpoint
+  // 3. Replace the URL below with it (e.g. 'https://formspree.io/f/abcdwxyz')
+  var WAITLIST_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+
+  var submitBtn = form.querySelector('button[type="submit"]');
+  var formErr = document.getElementById('form-error');
+
+  function showSuccess(first, email){
+    var msg = (first ? 'Thank you, ' + first + '. ' : 'Thank you. ') +
+              'As a Level 1 graduate you’ll be first to receive the full journey at ' + email + '.';
+    document.getElementById('success-msg').textContent = msg;
+    document.getElementById('form-view').style.display = 'none';
+    document.getElementById('success-view').classList.add('show');
+    var y = document.getElementById('waitlist').getBoundingClientRect().top + window.scrollY - 8;
+    window.scrollTo({top:y, behavior:'smooth'});
+  }
+
   var submitting = false;
   form.addEventListener('submit', function(ev){
     ev.preventDefault();
@@ -667,16 +699,30 @@
       emailEl.setAttribute('aria-invalid','true'); emailEl.focus();
       return;
     }
-    submitting = true;
     var name = document.getElementById('name').value.trim();
     var first = name ? name.split(' ')[0] : '';
-    var msg = (first ? 'Thank you, ' + first + '. ' : 'Thank you. ') +
-              'As a Level 1 graduate you’ll be first to receive the full journey at ' + email + '.';
-    document.getElementById('success-msg').textContent = msg;
-    document.getElementById('form-view').style.display = 'none';
-    document.getElementById('success-view').classList.add('show');
-    var y = document.getElementById('waitlist').getBoundingClientRect().top + window.scrollY - 8;
-    window.scrollTo({top:y, behavior:'smooth'});
+
+    formErr.classList.remove('show');
+    submitting = true;
+    var btnLabel = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    fetch(WAITLIST_ENDPOINT, {
+      method: 'POST',
+      headers: {'Accept': 'application/json'},
+      body: new FormData(form)
+    }).then(function(res){
+      if(res.ok){ showSuccess(first, email); return; }
+      return res.json().then(function(d){
+        throw new Error((d && d.errors && d.errors[0] && d.errors[0].message) || 'Submission failed');
+      });
+    }).catch(function(){
+      submitting = false;
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = btnLabel;
+      formErr.classList.add('show');
+    });
   });
 </script>
 </body>
