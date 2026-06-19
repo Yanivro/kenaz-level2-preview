@@ -258,14 +258,15 @@
 
   /* ======================= FACILITATORS ======================= */
   .fac-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,3vw,40px);margin-top:clamp(40px,5vw,60px)}
-  .fac{display:grid;grid-template-columns:140px 1fr;gap:26px;align-items:start;
+  .fac{display:grid;grid-template-columns:220px 1fr;gap:clamp(26px,2.6vw,36px);align-items:start;
     background:var(--surface);border:1px solid var(--border);border-radius:2px;padding:clamp(24px,2.4vw,34px)}
-  .portrait{position:relative;overflow:hidden;width:140px;height:170px;border-radius:2px;background:linear-gradient(160deg,#f1efe8,#e7e3d6);
-    border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--accent-deep)}
+  .portrait{position:relative;overflow:hidden;width:220px;aspect-ratio:4/5;border-radius:2px;background:linear-gradient(160deg,#f1efe8,#e7e3d6);
+    border:1px solid var(--border)}
   .portrait::before{content:"";position:absolute;inset:0;
     background:url(assets/kenaz/6247a7dbbd6a4724bd88197664e0f6dd.png) center/74px no-repeat;opacity:.1}
   .portrait .initials{position:relative;z-index:1;font-size:30px;font-weight:300;letter-spacing:.12em;color:var(--fg);opacity:.55}
   .portrait .ph{position:relative;z-index:1;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 32%;z-index:2}
   .fac .name{font-size:clamp(21px,1.7vw,25px);font-weight:300}
   .fac .role{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-deep);margin:8px 0 4px;font-weight:500}
   .fac .handle{font-size:13px;color:var(--muted)}
@@ -342,7 +343,7 @@
     .terr-grid{grid-template-columns:1fr}
     .facts{grid-template-columns:1fr 1fr}
     .fac{grid-template-columns:1fr}
-    .portrait{width:120px;height:140px}
+    .portrait{width:100%;min-height:0;aspect-ratio:4/5}
     .foot{flex-direction:column}
     .foot .contact{text-align:left}
     .accredit .logos{gap:30px}
@@ -535,9 +536,8 @@
     </div>
     <div class="fac-grid">
       <div class="fac reveal">
-        <div class="portrait" aria-label="Photo of Yaniv Rose coming soon">
-          <span class="initials">YR</span>
-          <span class="ph">Photo to come</span>
+        <div class="portrait">
+          <img src="assets/kenaz/opt/yaniv.jpg" width="600" height="750" loading="lazy" decoding="async" alt="Yaniv Rose" />
         </div>
         <div>
           <div class="name">Yaniv Rose</div>
@@ -547,9 +547,8 @@
         </div>
       </div>
       <div class="fac reveal d1">
-        <div class="portrait" aria-label="Photo of Kenaz Patricia coming soon">
-          <span class="initials">KP</span>
-          <span class="ph">Photo to come</span>
+        <div class="portrait">
+          <img src="assets/kenaz/opt/kenaz.jpg" width="600" height="750" loading="lazy" decoding="async" alt="Kenaz (Patricia Udipti)" />
         </div>
         <div>
           <div class="name">Kenaz (Patricia Udipti)</div>
