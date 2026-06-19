@@ -86,6 +86,18 @@
   .btn-ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
   .btn .arr{transition:transform .4s var(--ease)}
   .btn:hover .arr{transform:translateX(4px)}
+  .btn:active{transform:translateY(1px)}
+
+  /* ---- focus visibility (keyboard) — WCAG 2.4.7 ---- */
+  :focus-visible{outline:2px solid var(--fg);outline-offset:3px;border-radius:3px}
+  /* light-on-dark surfaces need a light ring to keep 3:1 */
+  .hero a:focus-visible,.band-dark a:focus-visible,.facts-band a:focus-visible,
+  .waitlist a:focus-visible,.waitlist button:focus-visible,.waitlist input:focus-visible,
+  footer a:focus-visible,.nav:not(.scrolled) .nav-cta:focus-visible,
+  .nav:not(.scrolled) .brand:focus-visible{outline-color:#fff}
+
+  /* hash / keyboard landing clears the fixed nav */
+  [id]{scroll-margin-top:84px}
 
   /* ======================= NAV ======================= */
   .nav{
@@ -560,8 +572,8 @@
         </div>
         <div class="field">
           <label for="email">Email <span style="color:var(--accent)">*</span></label>
-          <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" required />
-          <span class="err-msg" id="email-err">Please enter a valid email so we can reach you.</span>
+          <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" required aria-describedby="email-err" />
+          <span class="err-msg" id="email-err" role="alert">Please enter a valid email so we can reach you.</span>
         </div>
         <button type="submit" class="btn btn-gold">Get early access <span class="arr">→</span></button>
         <p class="micro">For Level 1 graduates · no payment · unsubscribe anytime</p>
@@ -639,16 +651,23 @@
   function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); }
 
   emailEl.addEventListener('input', function(){
-    if(validEmail(emailEl.value)){ emailEl.classList.remove('err'); emailErr.classList.remove('show'); }
+    if(validEmail(emailEl.value)){
+      emailEl.classList.remove('err'); emailErr.classList.remove('show');
+      emailEl.removeAttribute('aria-invalid');
+    }
   });
 
+  var submitting = false;
   form.addEventListener('submit', function(ev){
     ev.preventDefault();
+    if(submitting) return;
     var email = emailEl.value.trim();
     if(!validEmail(email)){
-      emailEl.classList.add('err'); emailErr.classList.add('show'); emailEl.focus();
+      emailEl.classList.add('err'); emailErr.classList.add('show');
+      emailEl.setAttribute('aria-invalid','true'); emailEl.focus();
       return;
     }
+    submitting = true;
     var name = document.getElementById('name').value.trim();
     var first = name ? name.split(' ')[0] : '';
     var msg = (first ? 'Thank you, ' + first + '. ' : 'Thank you. ') +
