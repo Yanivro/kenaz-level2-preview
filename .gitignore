@@ -12,3 +12,6 @@ mqkgwc72-GPBA_Logo_Optimized.webp
 # Open Design internal working files — not part of the site
 .od-skills/
 *.artifact.json
+
+# Signup / application exports — contain real personal emails, never commit
+waitlist-signups.csv

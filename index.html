@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>KENAZ · Breathwork Mastery, Level Two</title>
-<meta name="description" content="Breathwork Mastery, Level Two. Chiang Mai, Thailand, 6–20 January 2027. For graduates of Level 1, by invitation. The deeper journey: relational, somatic, trauma-aware. Join the waitlist for early access and Super Early Bird pricing." />
+<meta name="description" content="Breathwork Mastery, Level Two. Chiang Mai, Thailand, 6–20 January 2027. For graduates of Level 1, by invitation. The deeper journey: relational, somatic, trauma-aware. Applications open to Level 1 graduates, with Early Bird pricing." />
 <link rel="icon" href="assets/kenaz/6247a7dbbd6a4724bd88197664e0f6dd.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -281,6 +281,65 @@
   .badge.hl{border-color:var(--accent);background:#fcf9ef;color:var(--fg)}
   .badge.hl b{color:var(--accent-deep);font-weight:600;letter-spacing:.02em}
 
+  /* ======================= PRICING ======================= */
+  .pricing{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+  .pricing::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 50% -10%,rgba(212,175,55,.12),transparent 60%)}
+  .pricing .wrap{position:relative;z-index:2}
+  .pricing .section-head{max-width:62ch}
+  .pricing h2{margin-top:.35em}
+  .pricing .lead-d{color:rgba(255,255,255,.78);max-width:60ch;margin-top:1.1em;font-size:clamp(15px,1.15vw,17.5px);line-height:1.7}
+
+  .ptable{margin-top:clamp(38px,4.5vw,58px);border:1px solid rgba(255,255,255,.14);border-radius:2px;overflow:hidden}
+  .prow{display:grid;grid-template-columns:1.25fr 1fr 1fr 1fr}
+  .prow+.prow{border-top:1px solid rgba(255,255,255,.14)}
+  .pcell{padding:clamp(18px,2vw,26px) clamp(15px,1.7vw,26px);display:flex;flex-direction:column;justify-content:center}
+  .pcell+.pcell{border-left:1px solid rgba(255,255,255,.14)}
+  .phead{background:rgba(255,255,255,.03)}
+  .phead .tier .tname{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.85);font-weight:500}
+  .phead .tier .tsub{font-size:11.5px;color:rgba(255,255,255,.5);margin-top:6px;letter-spacing:.02em}
+  .phead .tier .ttag{align-self:flex-start;margin-top:9px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink);background:var(--accent);padding:3px 9px;border-radius:2px;font-weight:600}
+  .tier-now{background:rgba(212,175,55,.09)}
+  .phead .tier-now{box-shadow:inset 0 2px 0 var(--accent)}
+  .rowlabel .rname{font-size:clamp(18px,1.7vw,22px);font-weight:300}
+  .rowlabel .rnote{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-top:9px}
+  .price{font-size:clamp(23px,2.5vw,33px);font-weight:200;letter-spacing:.01em;color:#fff}
+  .price .tier-mini{display:none}
+  .pfoot{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px 28px;font-size:13px;color:rgba(255,255,255,.62)}
+  .pfoot .pf{display:inline-flex;align-items:center;gap:9px}
+  .pfoot .pf .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .pricing .pcta{margin-top:2.4em}
+
+  /* ======================= VENUE ======================= */
+  .venue .section-head{max-width:64ch}
+  .venue h2{margin-top:.35em}
+  .venue-hero{margin-top:clamp(34px,4vw,54px);position:relative;border-radius:2px;overflow:hidden;border:1px solid var(--border)}
+  .venue-hero img{display:block;width:100%;height:auto}
+  .venue-hero figcaption{position:absolute;left:0;right:0;bottom:0;
+    background:linear-gradient(0deg,rgba(20,18,16,.72),rgba(20,18,16,0));
+    color:#fff;padding:clamp(30px,5vw,52px) clamp(20px,2.4vw,30px) clamp(16px,1.8vw,22px);
+    font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+  .venue-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);
+    border:1px solid var(--border);border-radius:2px;overflow:hidden;margin-top:clamp(28px,3vw,40px)}
+  .venue-fact{background:var(--surface);padding:clamp(20px,2vw,30px) clamp(14px,1.5vw,22px);text-align:center}
+  .venue-fact .vf-big{font-size:clamp(19px,2vw,26px);font-weight:300;color:var(--fg);line-height:1.12}
+  .venue-fact .vf-lbl{margin-top:9px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  .venue-gallery{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(96px,9vw,148px);
+    gap:clamp(10px,1.1vw,15px);margin-top:clamp(28px,3vw,40px)}
+  .venue-gallery figure{overflow:hidden;border-radius:2px;border:1px solid var(--border);background:#eceae4}
+  .venue-gallery img{width:100%;height:100%;object-fit:cover}
+  .vg-1{grid-column:span 4;grid-row:span 2}
+  .vg-2{grid-column:span 2;grid-row:span 2}
+  .vg-3{grid-column:span 2;grid-row:span 2}
+  .vg-4{grid-column:span 2;grid-row:span 2}
+  .vg-5{grid-column:span 2;grid-row:span 2}
+  .vg-6{grid-column:span 6;grid-row:span 2}
+  .venue-food{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,3vw,48px);align-items:center;margin-top:clamp(44px,5.5vw,72px)}
+  .venue-food h3{font-size:clamp(22px,2.4vw,30px);font-weight:300}
+  .venue-food p{color:var(--muted);max-width:46ch}
+  .venue-food .vf-imgs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,1.1vw,15px)}
+  .venue-food .vf-imgs img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:2px;border:1px solid var(--border)}
+
   /* ======================= WAITLIST ======================= */
   .waitlist{background:var(--ink);color:#fff;position:relative;overflow:hidden}
   .waitlist::before{content:"";position:absolute;inset:0;
@@ -288,9 +347,26 @@
   .waitlist .wrap{position:relative;z-index:2;max-width:760px;text-align:center}
   .waitlist h2{margin:.5em 0 .5em}
   .waitlist .body{color:rgba(255,255,255,.78);max-width:52ch;margin:0 auto}
-  .form{margin:2.4em auto 0;max-width:480px;text-align:left}
-  .field{margin-bottom:16px}
+  .form{margin:2.4em auto 0;max-width:540px;text-align:left}
+  .field{margin-bottom:18px}
   .field label{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:8px}
+  .field .hint{text-transform:none;letter-spacing:0;font-size:12px;color:rgba(255,255,255,.45);margin-top:3px;display:block}
+  .field textarea,.field select{width:100%;padding:15px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);
+    border-radius:2px;color:#fff;font-family:var(--font);font-size:16px;font-weight:300;transition:.3s var(--ease)}
+  .field textarea{line-height:1.6;resize:vertical;min-height:92px}
+  .field textarea::placeholder{color:rgba(255,255,255,.4)}
+  .field textarea:focus,.field select:focus{outline:none;border-color:var(--accent);background-color:rgba(255,255,255,.09)}
+  .field select{appearance:none;-webkit-appearance:none;cursor:pointer;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23d4af37' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>");
+    background-repeat:no-repeat;background-position:right 16px center;padding-right:42px}
+  .field select option{color:#1b1b1b;background:#fff}
+  .pills{display:flex;flex-wrap:wrap;gap:9px}
+  .pills label{cursor:pointer;margin:0}
+  .pills input{position:absolute;opacity:0;width:0;height:0}
+  .pills span{display:inline-block;padding:10px 16px;border:1px solid rgba(255,255,255,.2);border-radius:2px;
+    font-size:14px;font-weight:300;color:rgba(255,255,255,.82);transition:.22s var(--ease)}
+  .pills input:checked+span{border-color:var(--accent);background:rgba(212,175,55,.16);color:#fff}
+  .pills input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
   .field input{width:100%;padding:15px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);
     border-radius:2px;color:#fff;font-family:var(--font);font-size:16px;font-weight:300;transition:.3s var(--ease)}
   .field input::placeholder{color:rgba(255,255,255,.4)}
@@ -349,6 +425,28 @@
     .accredit .logos{gap:30px}
     .accredit .logos .sep{display:none}
   }
+  @media (max-width:720px){
+    /* pricing → stacked cards */
+    .ptable{border:none;overflow:visible}
+    .prow{display:block;border:1px solid rgba(255,255,255,.16);border-radius:2px}
+    .prow+.prow{margin-top:14px}
+    .phead{display:none}
+    .pcell{padding:15px 18px}
+    .pcell+.pcell{border-left:none;border-top:1px solid rgba(255,255,255,.1)}
+    .rowlabel{background:rgba(255,255,255,.04)}
+    .rowlabel .rnote{margin-top:5px}
+    .price{flex-direction:row;align-items:baseline;justify-content:space-between;gap:14px;font-size:26px}
+    .price .tier-mini{display:inline-block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:400}
+    .tier-now.price{background:rgba(212,175,55,.12)}
+    .tier-now.price .tier-mini{color:var(--accent)}
+    /* venue */
+    .venue-facts{grid-template-columns:1fr 1fr}
+    .venue-food{grid-template-columns:1fr}
+    .venue-gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:clamp(96px,26vw,150px)}
+    .venue-gallery figure{grid-column:span 1;grid-row:span 2}
+    .venue-gallery .vg-1,.venue-gallery .vg-6{grid-column:span 2}
+    .venue-hero figcaption{position:static;background:none;color:var(--muted);padding:12px 2px 0}
+  }
 </style>
 </head>
 <body>
@@ -360,7 +458,7 @@
     <span class="wordmark">KENAZ</span>
     <span class="lvl">Level 2</span>
   </a>
-  <a class="nav-cta" href="#waitlist">Join the waitlist</a>
+  <a class="nav-cta" href="#waitlist">Apply now</a>
 </nav>
 
 <!-- ===================== HERO ===================== -->
@@ -373,7 +471,7 @@
       <div class="hero-tags reveal d2"><span class="hero-tag"><span class="dot"></span>Chiang Mai, Thailand <span class="tsep">·</span> 6&ndash;20 January 2027</span></div>
       <p class="sub reveal d2">For those ready to hold bigger groups, lead their own retreats, and go further with their clients than any training has taken them. A place to meet yourself, honestly, as a leader, and to learn to teach what you carry.</p>
       <div class="hero-actions reveal d3">
-        <a class="btn btn-gold" href="#waitlist">Get early access <span class="arr">→</span></a>
+        <a class="btn btn-gold" href="#waitlist">Apply for your place <span class="arr">→</span></a>
         <span class="micro"><b>14 spots</b> · Level 1 graduates only</span>
       </div>
     </div>
@@ -525,6 +623,48 @@
   </div>
 </section>
 
+<!-- ===================== VENUE ===================== -->
+<section class="venue" id="venue" data-od-id="venue">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow reveal">Where we'll gather</span>
+      <h2 class="reveal d1">La Tierra. Where everything grows.</h2>
+      <p class="lead muted reveal d2" style="margin-top:1em">A private twelve-acre sanctuary in the hills an hour from Chiang Mai, built to reconnect people with nature, themselves and each other. Lanna-style wooden cottages under fruit trees, a creek running through the grounds, open-air spaces to move and rest, and long shared tables where the days begin and end together.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <figure class="venue-hero reveal d1">
+      <img src="assets/kenaz/venue/dining.jpg" width="2000" height="1502" loading="lazy" decoding="async" alt="A long communal dining table on an open deck looking out over forested mountains" />
+      <figcaption>One long table, and the valley below. Most meals are shared here.</figcaption>
+    </figure>
+    <div class="venue-facts reveal d2">
+      <div class="venue-fact"><div class="vf-big">12 acres</div><div class="vf-lbl">Private sanctuary</div></div>
+      <div class="venue-fact"><div class="vf-big">~1 hour</div><div class="vf-lbl">From Chiang Mai</div></div>
+      <div class="venue-fact"><div class="vf-big">Lanna cottages</div><div class="vf-lbl">Wooden &amp; en-suite</div></div>
+      <div class="venue-fact"><div class="vf-big">Full board</div><div class="vf-lbl">Locally sourced</div></div>
+    </div>
+    <div class="venue-gallery reveal d2">
+      <figure class="vg-1"><img src="assets/kenaz/venue/lodge-dusk.jpg" loading="lazy" decoding="async" alt="A two-storey wooden Lanna lodge lit warmly at dusk, a stone path leading through the garden" /></figure>
+      <figure class="vg-2"><img src="assets/kenaz/venue/bed-detail.jpg" loading="lazy" decoding="async" alt="Close detail of a bungalow bed with a woven headboard and natural linens" /></figure>
+      <figure class="vg-3"><img src="assets/kenaz/venue/bungalow-ext.jpg" loading="lazy" decoding="async" alt="A wooden bungalow among mango trees, a stone path curving past it" /></figure>
+      <figure class="vg-4"><img src="assets/kenaz/venue/room-twin.jpg" loading="lazy" decoding="async" alt="A bright shared bungalow room with two beds and woven headboards" /></figure>
+      <figure class="vg-5"><img src="assets/kenaz/venue/room-double.jpg" loading="lazy" decoding="async" alt="A warm bungalow bedroom lit by soft lamplight" /></figure>
+      <figure class="vg-6"><img src="assets/kenaz/venue/grounds.jpg" loading="lazy" decoding="async" alt="Garden paths winding between bungalows and tall trees in the green grounds" /></figure>
+    </div>
+    <div class="venue-food reveal d2">
+      <div class="vf-copy">
+        <span class="eyebrow">At the table</span>
+        <h3 style="margin-top:.4em">Fresh, local, and made with care.</h3>
+        <p style="margin-top:1em">Every meal is chef-prepared from fresh, locally sourced ingredients, grown or gathered close to the land it's served on. Simple, nourishing food to match the work: bowls of fruit and granola to open the morning, warm plates to close the day. Alcohol-free and smoke-free throughout, so the container stays clean.</p>
+      </div>
+      <div class="vf-imgs">
+        <img src="assets/kenaz/venue/food-breakfast.jpg" loading="lazy" decoding="async" alt="Wooden bowls of granola, yogurt and fresh cut fruit" />
+        <img src="assets/kenaz/venue/food-dinner.jpg" loading="lazy" decoding="async" alt="A plated dinner of seared salmon over black noodles with fresh herbs and chili" />
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== FACILITATORS ===================== -->
 <section id="facilitators" data-od-id="facilitators">
   <div class="wrap">
@@ -559,13 +699,52 @@
   </div>
 </section>
 
+<!-- ===================== PRICING ===================== -->
+<section class="pricing" id="pricing" data-od-id="pricing">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow on-dark reveal">The investment</span>
+      <h2 class="reveal d1">Your place, all-inclusive.</h2>
+      <p class="lead-d reveal d2">One price covers everything: your seat in the training, your bungalow and all meals for the two weeks at La Tierra, and the full six-month online container that follows. The earlier you commit, the less you pay.</p>
+    </div>
+    <div class="ptable reveal d2" role="table" aria-label="Pricing by room and tier">
+      <div class="prow phead" role="row">
+        <div class="pcell rowlabel" role="columnheader"></div>
+        <div class="pcell tier tier-now" role="columnheader"><span class="tname">Early bird</span><span class="ttag">Available now</span></div>
+        <div class="pcell tier" role="columnheader"><span class="tname">Late bloomer</span><span class="tsub">When early bird closes</span></div>
+        <div class="pcell tier" role="columnheader"><span class="tname">Full price</span><span class="tsub">Final</span></div>
+      </div>
+      <div class="prow" role="row">
+        <div class="pcell rowlabel" role="rowheader"><span class="rname">Shared Bungalow</span></div>
+        <div class="pcell price tier-now" role="cell"><span class="tier-mini">Early bird</span>€3,555</div>
+        <div class="pcell price" role="cell"><span class="tier-mini">Late bloomer</span>€3,888</div>
+        <div class="pcell price" role="cell"><span class="tier-mini">Full price</span>€4,222</div>
+      </div>
+      <div class="prow" role="row">
+        <div class="pcell rowlabel" role="rowheader"><span class="rname">Private Bungalow</span><span class="rnote">Only 2 left</span></div>
+        <div class="pcell price tier-now" role="cell"><span class="tier-mini">Early bird</span>€3,777</div>
+        <div class="pcell price" role="cell"><span class="tier-mini">Late bloomer</span>€4,111</div>
+        <div class="pcell price" role="cell"><span class="tier-mini">Full price</span>€4,444</div>
+      </div>
+    </div>
+    <div class="pfoot reveal d2">
+      <span class="pf"><span class="dot"></span>Room, meals &amp; training included</span>
+      <span class="pf"><span class="dot"></span>Per person, in euros</span>
+      <span class="pf"><span class="dot"></span>Only 14 places</span>
+    </div>
+    <div class="pcta reveal d3">
+      <a class="btn btn-gold" href="#waitlist">Lock the early bird price <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== EARLY LOOK / SCARCITY ===================== -->
 <section class="earlylook" data-od-id="early-look">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow reveal">The invitation</span>
       <h2 class="reveal d1">Ready to step in?</h2>
-      <p class="lead muted reveal d2" style="margin-top:1em">The full curriculum, the dates and the details are coming soon. But we want to give you the best price now, before any of it opens. If this feels aligned, join the waitlist: you'll be <em class="cap" style="color:var(--accent-deep)">FIRST</em> in line, at the best price. We'd love to have you join us.</p>
+      <p class="lead muted reveal d2" style="margin-top:1em">Level 2 is open to graduates of Level 1, and the earlier you commit, the better the price. If this feels aligned, apply below: tell us where you are in your journey, and we'll follow up personally to hold your <em class="cap" style="color:var(--accent-deep)">PLACE</em>. We'd love to have you join us.</p>
     </div>
     <div class="badges reveal d2">
       <span class="badge"><span class="dot"></span>Only 14 places</span>
@@ -579,11 +758,11 @@
 <section class="waitlist" id="waitlist" data-od-id="waitlist">
   <div class="wrap">
     <div id="form-view">
-      <span class="eyebrow on-dark reveal">Early access</span>
-      <h2 class="reveal d1">Be first to see the full journey.</h2>
-      <p class="body reveal d2">Leave your details and you'll be first to receive the full curriculum, the dates, and your Super Early Bird invitation, before anyone else.</p>
+      <span class="eyebrow on-dark reveal">Apply to join</span>
+      <h2 class="reveal d1">Apply for your place.</h2>
+      <p class="body reveal d2">Level 2 is open to graduates of Level 1. Tell us where you are in your journey and what you're bringing, and we'll follow up personally with payment details so you can secure your place with a deposit.</p>
       <form class="form reveal d2" id="waitlist-form" novalidate>
-        <input type="hidden" name="_subject" value="New KENAZ Level 2 waitlist signup" />
+        <input type="hidden" name="_subject" value="New KENAZ Level 2 application" />
         <div class="field">
           <label for="name">Name <span style="text-transform:none;letter-spacing:0;opacity:.7">(optional)</span></label>
           <input type="text" id="name" name="name" placeholder="Your first name" autocomplete="given-name" />
@@ -593,16 +772,60 @@
           <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" required aria-describedby="email-err" />
           <span class="err-msg" id="email-err" role="alert">Please enter a valid email so we can reach you.</span>
         </div>
-        <button type="submit" class="btn btn-gold">Secure your spot <span class="arr">→</span></button>
-        <p class="micro">For Level 1 graduates · Priority access to Level 2</p>
+        <div class="field">
+          <label for="room_preference">Which room would you like?</label>
+          <select id="room_preference" name="room_preference">
+            <option value="" selected>Choose a room…</option>
+            <option value="Shared Bungalow">Shared Bungalow</option>
+            <option value="Private Bungalow">Private Bungalow (only 2 left)</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Have you completed your Level 1 session reports?</label>
+          <div class="pills">
+            <label><input type="radio" name="session_reports" value="Yes, all submitted" /><span>Yes, all submitted</span></label>
+            <label><input type="radio" name="session_reports" value="Some still to go" /><span>Some still to go</span></label>
+            <label><input type="radio" name="session_reports" value="Not yet" /><span>Not yet</span></label>
+          </div>
+        </div>
+        <div class="field">
+          <label>Have you received your Level 1 certification?</label>
+          <div class="pills">
+            <label><input type="radio" name="certification" value="Yes" /><span>Yes</span></label>
+            <label><input type="radio" name="certification" value="Not yet" /><span>Not yet</span></label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="journey_status">Where are you in your journey?<span class="hint">Sessions, reports, certification — wherever you're at is welcome.</span></label>
+          <textarea id="journey_status" name="journey_status" placeholder="A few words on where you are with Level 1…"></textarea>
+        </div>
+        <div class="field">
+          <label for="main_drive">What's drawing you to Level 2?<span class="hint">Your main reason for stepping in.</span></label>
+          <textarea id="main_drive" name="main_drive" placeholder="What's calling you…"></textarea>
+        </div>
+        <div class="field">
+          <label for="expectations">What do you hope to walk away with?</label>
+          <textarea id="expectations" name="expectations" placeholder="What you'd love this to give you…"></textarea>
+        </div>
+        <div class="field">
+          <label for="facilitation_challenges">What are your biggest challenges in facilitation right now?</label>
+          <textarea id="facilitation_challenges" name="facilitation_challenges" placeholder="Where you feel the edge…"></textarea>
+        </div>
+        <div class="field">
+          <label for="anything_else">Anything else you'd like us to know? <span style="text-transform:none;letter-spacing:0;opacity:.7">(optional)</span></label>
+          <textarea id="anything_else" name="anything_else" placeholder="Anything at all…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold">Send your application <span class="arr">→</span></button>
+        <p class="micro">For Level 1 graduates · We'll follow up with payment details</p>
         <p class="form-error" id="form-error" role="alert">Something went wrong. Please try again, or email info@kenazportal.com.</p>
       </form>
     </div>
 
     <div class="success" id="success-view" aria-live="polite">
       <span class="seal" aria-hidden="true"><span class="chev"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span></span>
-      <h3>You're in.</h3>
-      <p id="success-msg">Thank you. As a Level 1 graduate you'll be first to receive the full journey.</p>
+      <h3>Application received.</h3>
+      <p id="success-msg">Thank you. We'll be in touch personally with payment details so you can secure your place.</p>
     </div>
   </div>
 </section>
@@ -686,7 +909,7 @@
 
   function showSuccess(first, email){
     var msg = (first ? 'Thank you, ' + first + '. ' : 'Thank you. ') +
-              'As a Level 1 graduate you’ll be first to receive the full journey at ' + email + '.';
+              'We’ll be in touch at ' + email + ' with payment details so you can secure your place.';
     document.getElementById('success-msg').textContent = msg;
     document.getElementById('form-view').style.display = 'none';
     document.getElementById('success-view').classList.add('show');
