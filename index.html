@@ -308,6 +308,11 @@
   .pfoot{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px 28px;font-size:13px;color:rgba(255,255,255,.62)}
   .pfoot .pf{display:inline-flex;align-items:center;gap:9px}
   .pfoot .pf .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .pricing .pdeadline{display:inline-flex;align-items:center;gap:10px;margin-top:1.5em;
+    border:1px solid var(--accent);border-radius:2px;padding:11px 18px;font-size:13.5px;
+    letter-spacing:.03em;color:#fff;background:rgba(212,175,55,.12)}
+  .pricing .pdeadline .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none}
+  .pricing .pdeadline b{color:var(--accent);font-weight:600}
   .pricing .pcta{margin-top:2.4em}
 
   /* ======================= VENUE ======================= */
@@ -706,12 +711,13 @@
       <span class="eyebrow on-dark reveal">The investment</span>
       <h2 class="reveal d1">Your place, all-inclusive.</h2>
       <p class="lead-d reveal d2">One price covers everything: your seat in the training, your bungalow and all meals for the two weeks at La Tierra, and the full six-month online container that follows. The earlier you commit, the less you pay.</p>
+      <p class="pdeadline reveal d2"><span class="dot"></span>Early Bird pricing is available until <b>28 August 2026</b></p>
     </div>
     <div class="ptable reveal d2" role="table" aria-label="Pricing by room and tier">
       <div class="prow phead" role="row">
         <div class="pcell rowlabel" role="columnheader"></div>
-        <div class="pcell tier tier-now" role="columnheader"><span class="tname">Early bird</span><span class="ttag">Available now</span></div>
-        <div class="pcell tier" role="columnheader"><span class="tname">Late bloomer</span><span class="tsub">When early bird closes</span></div>
+        <div class="pcell tier tier-now" role="columnheader"><span class="tname">Early bird</span><span class="ttag">Until 28 Aug</span></div>
+        <div class="pcell tier" role="columnheader"><span class="tname">Late bloomer</span><span class="tsub">From 29 August</span></div>
         <div class="pcell tier" role="columnheader"><span class="tname">Full price</span><span class="tsub">Final</span></div>
       </div>
       <div class="prow" role="row">
@@ -749,7 +755,7 @@
     <div class="badges reveal d2">
       <span class="badge"><span class="dot"></span>Only 14 places</span>
       <span class="badge"><span class="dot"></span>Level 1 graduates only</span>
-      <span class="badge hl"><span class="dot"></span>Super Early Bird · <b>Save 20%</b></span>
+      <span class="badge hl"><span class="dot"></span>Early Bird until <b>28 August</b></span>
     </div>
   </div>
 </section>
