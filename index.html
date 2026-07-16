@@ -463,7 +463,7 @@
     <span class="wordmark">KENAZ</span>
     <span class="lvl">Level 2</span>
   </a>
-  <a class="nav-cta" href="#waitlist">Apply now</a>
+  <a class="nav-cta" href="apply.html" data-cta="Nav Join">Join</a>
 </nav>
 
 <!-- ===================== HERO ===================== -->
@@ -476,7 +476,7 @@
       <div class="hero-tags reveal d2"><span class="hero-tag"><span class="dot"></span>Chiang Mai, Thailand <span class="tsep">·</span> 6&ndash;20 January 2027</span></div>
       <p class="sub reveal d2">For those ready to hold bigger groups, lead their own retreats, and go further with their clients than any training has taken them. A place to meet yourself, honestly, as a leader, and to learn to teach what you carry.</p>
       <div class="hero-actions reveal d3">
-        <a class="btn btn-gold" href="#waitlist">Apply for your place <span class="arr">→</span></a>
+        <a class="btn btn-gold" href="apply.html" data-cta="Hero Join">Join us <span class="arr">→</span></a>
         <span class="micro"><b>14 spots</b> · Level 1 graduates only</span>
       </div>
     </div>
@@ -640,7 +640,6 @@
   <div class="wrap">
     <figure class="venue-hero reveal d1">
       <img src="assets/kenaz/venue/dining.jpg" width="2000" height="1502" loading="lazy" decoding="async" alt="A long communal dining table on an open deck looking out over forested mountains" />
-      <figcaption>One long table, and the valley below. Most meals are shared here.</figcaption>
     </figure>
     <div class="venue-facts reveal d2">
       <div class="venue-fact"><div class="vf-big">12 acres</div><div class="vf-lbl">Private sanctuary</div></div>
@@ -739,7 +738,7 @@
       <span class="pf"><span class="dot"></span>Only 14 places</span>
     </div>
     <div class="pcta reveal d3">
-      <a class="btn btn-gold" href="#waitlist">Lock the early bird price <span class="arr">→</span></a>
+      <a class="btn btn-gold" href="apply.html" data-cta="Pricing Join">Join us <span class="arr">→</span></a>
     </div>
   </div>
 </section>
@@ -750,88 +749,15 @@
     <div class="section-head">
       <span class="eyebrow reveal">The invitation</span>
       <h2 class="reveal d1">Ready to step in?</h2>
-      <p class="lead muted reveal d2" style="margin-top:1em">Level 2 is open to graduates of Level 1, and the earlier you commit, the better the price. If this feels aligned, apply below: tell us where you are in your journey, and we'll follow up personally to hold your <em class="cap" style="color:var(--accent-deep)">PLACE</em>. We'd love to have you join us.</p>
+      <p class="lead muted reveal d2" style="margin-top:1em">Level 2 is open to graduates of Level 1, and the earlier you commit, the better the price. If this feels aligned, start your application: tell us where you are in your journey, and we'll follow up personally to hold your <em class="cap" style="color:var(--accent-deep)">PLACE</em>. We'd love to have you join us.</p>
     </div>
     <div class="badges reveal d2">
       <span class="badge"><span class="dot"></span>Only 14 places</span>
       <span class="badge"><span class="dot"></span>Level 1 graduates only</span>
       <span class="badge hl"><span class="dot"></span>Early Bird until <b>28 August</b></span>
     </div>
-  </div>
-</section>
-
-<!-- ===================== WAITLIST (conversion) ===================== -->
-<section class="waitlist" id="waitlist" data-od-id="waitlist">
-  <div class="wrap">
-    <div id="form-view">
-      <span class="eyebrow on-dark reveal">Apply to join</span>
-      <h2 class="reveal d1">Apply for your place.</h2>
-      <p class="body reveal d2">Level 2 is open to graduates of Level 1. Tell us where you are in your journey and what you're bringing, and we'll follow up personally with payment details so you can secure your place with a deposit.</p>
-      <form class="form reveal d2" id="waitlist-form" novalidate>
-        <input type="hidden" name="_subject" value="New KENAZ Level 2 application" />
-        <div class="field">
-          <label for="name">Name <span style="text-transform:none;letter-spacing:0;opacity:.7">(optional)</span></label>
-          <input type="text" id="name" name="name" placeholder="Your first name" autocomplete="given-name" />
-        </div>
-        <div class="field">
-          <label for="email">Email <span style="color:var(--accent)">*</span></label>
-          <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" required aria-describedby="email-err" />
-          <span class="err-msg" id="email-err" role="alert">Please enter a valid email so we can reach you.</span>
-        </div>
-        <div class="field">
-          <label for="room_preference">Which room would you like?</label>
-          <select id="room_preference" name="room_preference">
-            <option value="" selected>Choose a room…</option>
-            <option value="Shared Bungalow">Shared Bungalow</option>
-            <option value="Private Bungalow">Private Bungalow (only 2 left)</option>
-            <option value="Not sure yet">Not sure yet</option>
-          </select>
-        </div>
-        <div class="field">
-          <label>Have you completed your Level 1 session reports?</label>
-          <div class="pills">
-            <label><input type="radio" name="session_reports" value="Yes, all submitted" /><span>Yes, all submitted</span></label>
-            <label><input type="radio" name="session_reports" value="Some still to go" /><span>Some still to go</span></label>
-            <label><input type="radio" name="session_reports" value="Not yet" /><span>Not yet</span></label>
-          </div>
-        </div>
-        <div class="field">
-          <label>Have you received your Level 1 certification?</label>
-          <div class="pills">
-            <label><input type="radio" name="certification" value="Yes" /><span>Yes</span></label>
-            <label><input type="radio" name="certification" value="Not yet" /><span>Not yet</span></label>
-          </div>
-        </div>
-        <div class="field">
-          <label for="journey_status">Where are you in your journey?<span class="hint">Sessions, reports, certification — wherever you're at is welcome.</span></label>
-          <textarea id="journey_status" name="journey_status" placeholder="A few words on where you are with Level 1…"></textarea>
-        </div>
-        <div class="field">
-          <label for="main_drive">What's drawing you to Level 2?<span class="hint">Your main reason for stepping in.</span></label>
-          <textarea id="main_drive" name="main_drive" placeholder="What's calling you…"></textarea>
-        </div>
-        <div class="field">
-          <label for="expectations">What do you hope to walk away with?</label>
-          <textarea id="expectations" name="expectations" placeholder="What you'd love this to give you…"></textarea>
-        </div>
-        <div class="field">
-          <label for="facilitation_challenges">What are your biggest challenges in facilitation right now?</label>
-          <textarea id="facilitation_challenges" name="facilitation_challenges" placeholder="Where you feel the edge…"></textarea>
-        </div>
-        <div class="field">
-          <label for="anything_else">Anything else you'd like us to know? <span style="text-transform:none;letter-spacing:0;opacity:.7">(optional)</span></label>
-          <textarea id="anything_else" name="anything_else" placeholder="Anything at all…"></textarea>
-        </div>
-        <button type="submit" class="btn btn-gold">Send your application <span class="arr">→</span></button>
-        <p class="micro">For Level 1 graduates · We'll follow up with payment details</p>
-        <p class="form-error" id="form-error" role="alert">Something went wrong. Please try again, or email info@kenazportal.com.</p>
-      </form>
-    </div>
-
-    <div class="success" id="success-view" aria-live="polite">
-      <span class="seal" aria-hidden="true"><span class="chev"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span></span>
-      <h3>Application received.</h3>
-      <p id="success-msg">Thank you. We'll be in touch personally with payment details so you can secure your place.</p>
+    <div class="reveal d3" style="margin-top:2.4em">
+      <a class="btn btn-gold" href="apply.html" data-cta="Invitation Join">Join us <span class="arr">→</span></a>
     </div>
   </div>
 </section>
@@ -892,72 +818,7 @@
     });
   });
 
-  // ---- waitlist form ----
-  var form = document.getElementById('waitlist-form');
-  var emailEl = document.getElementById('email');
-  var emailErr = document.getElementById('email-err');
-  function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); }
-
-  emailEl.addEventListener('input', function(){
-    if(validEmail(emailEl.value)){
-      emailEl.classList.remove('err'); emailErr.classList.remove('show');
-      emailEl.removeAttribute('aria-invalid');
-    }
-  });
-
-  // ---- Formspree endpoint ----
-  // 1. Create a free form at https://formspree.io  2. Copy its endpoint
-  // 3. Replace the URL below with it (e.g. 'https://formspree.io/f/abcdwxyz')
-  var WAITLIST_ENDPOINT = 'https://formspree.io/f/mrevwwje';
-
-  var submitBtn = form.querySelector('button[type="submit"]');
-  var formErr = document.getElementById('form-error');
-
-  function showSuccess(first, email){
-    var msg = (first ? 'Thank you, ' + first + '. ' : 'Thank you. ') +
-              'We’ll be in touch at ' + email + ' with payment details so you can secure your place.';
-    document.getElementById('success-msg').textContent = msg;
-    document.getElementById('form-view').style.display = 'none';
-    document.getElementById('success-view').classList.add('show');
-    var y = document.getElementById('waitlist').getBoundingClientRect().top + window.scrollY - 8;
-    window.scrollTo({top:y, behavior:'smooth'});
-  }
-
-  var submitting = false;
-  form.addEventListener('submit', function(ev){
-    ev.preventDefault();
-    if(submitting) return;
-    var email = emailEl.value.trim();
-    if(!validEmail(email)){
-      emailEl.classList.add('err'); emailErr.classList.add('show');
-      emailEl.setAttribute('aria-invalid','true'); emailEl.focus();
-      return;
-    }
-    var name = document.getElementById('name').value.trim();
-    var first = name ? name.split(' ')[0] : '';
-
-    formErr.classList.remove('show');
-    submitting = true;
-    var btnLabel = submitBtn.innerHTML;
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
-
-    fetch(WAITLIST_ENDPOINT, {
-      method: 'POST',
-      headers: {'Accept': 'application/json'},
-      body: new FormData(form)
-    }).then(function(res){
-      if(res.ok){ showSuccess(first, email); return; }
-      return res.json().then(function(d){
-        throw new Error((d && d.errors && d.errors[0] && d.errors[0].message) || 'Submission failed');
-      });
-    }).catch(function(){
-      submitting = false;
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = btnLabel;
-      formErr.classList.add('show');
-    });
-  });
 </script>
+<script src="assets/analytics.js"></script>
 </body>
 </html>

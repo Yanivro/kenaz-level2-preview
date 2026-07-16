@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Your application · KENAZ Level 2</title>
+<meta name="description" content="Application form for KENAZ Breathwork Mastery, Level Two. Open to graduates of Level 1." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/pages.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="in">
+    <a class="brand" href="index.html" aria-label="KENAZ home">
+      <span class="chev" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span>
+      <span class="wm">KENAZ</span>
+      <span class="lvl">Level 2</span>
+    </a>
+    <a class="back" href="apply.html">← Back</a>
+  </div>
+</header>
+
+<main class="wrap form-page">
+  <div id="form-intro">
+    <span class="eyebrow">Your application</span>
+    <h1>Tell us where you are.</h1>
+    <p class="lead">Level 2 is open to graduates of Level 1. A few questions, and we'll follow up personally with payment details so you can secure your place with a deposit.</p>
+  </div>
+
+  <div id="form-view" class="card">
+    <form id="app-form" novalidate>
+      <input type="hidden" name="_subject" value="New KENAZ Level 2 application" />
+      <div class="field">
+        <label for="name">Name <span class="opt">(optional)</span></label>
+        <input type="text" id="name" name="name" placeholder="Your first name" autocomplete="given-name" />
+      </div>
+      <div class="field">
+        <label for="email">Email <span class="req">*</span></label>
+        <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email" required aria-describedby="email-err" />
+        <span class="err-msg" id="email-err" role="alert">Please enter a valid email so we can reach you.</span>
+      </div>
+      <div class="field">
+        <label for="room_preference">Which room would you like?</label>
+        <select id="room_preference" name="room_preference">
+          <option value="" selected>Choose a room…</option>
+          <option value="Shared Bungalow">Shared Bungalow</option>
+          <option value="Private Bungalow">Private Bungalow (only 2 left)</option>
+          <option value="Not sure yet">Not sure yet</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Have you completed your Level 1 session reports?</label>
+        <div class="pills">
+          <label><input type="radio" name="session_reports" value="Yes, all submitted" /><span>Yes, all submitted</span></label>
+          <label><input type="radio" name="session_reports" value="Some still to go" /><span>Some still to go</span></label>
+          <label><input type="radio" name="session_reports" value="Not yet" /><span>Not yet</span></label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Have you received your Level 1 certification?</label>
+        <div class="pills">
+          <label><input type="radio" name="certification" value="Yes" /><span>Yes</span></label>
+          <label><input type="radio" name="certification" value="Not yet" /><span>Not yet</span></label>
+        </div>
+      </div>
+      <div class="field">
+        <label for="journey_status">Where are you in your journey?<span class="hint">Sessions, reports, certification — wherever you're at is welcome.</span></label>
+        <textarea id="journey_status" name="journey_status" placeholder="A few words on where you are with Level 1…"></textarea>
+      </div>
+      <div class="field">
+        <label for="main_drive">What's drawing you to Level 2?<span class="hint">Your main reason for stepping in.</span></label>
+        <textarea id="main_drive" name="main_drive" placeholder="What's calling you…"></textarea>
+      </div>
+      <div class="field">
+        <label for="expectations">What do you hope to walk away with?</label>
+        <textarea id="expectations" name="expectations" placeholder="What you'd love this to give you…"></textarea>
+      </div>
+      <div class="field">
+        <label for="facilitation_challenges">What are your biggest challenges in facilitation right now?</label>
+        <textarea id="facilitation_challenges" name="facilitation_challenges" placeholder="Where you feel the edge…"></textarea>
+      </div>
+      <div class="field">
+        <label for="anything_else">Anything else you'd like us to know? <span class="opt">(optional)</span></label>
+        <textarea id="anything_else" name="anything_else" placeholder="Anything at all…"></textarea>
+      </div>
+      <div class="submit-row">
+        <button type="submit" class="btn btn-gold">Send your application <span class="arr">→</span></button>
+        <p class="micro">For Level 1 graduates · We'll follow up with payment details</p>
+        <p class="form-error" id="form-error" role="alert">Something went wrong. Please try again, or email info@kenazportal.com.</p>
+      </div>
+    </form>
+  </div>
+
+  <div id="success-view" class="card success" aria-live="polite">
+    <span class="seal" aria-hidden="true"><span class="chev"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span></span>
+    <h2>Congratulations — we're so happy to have you!</h2>
+    <p id="success-msg">Your application is in. Here's what happens next.</p>
+    <ol class="next-steps">
+      <li><b>We read your application.</b> Patricia and Yaniv go through every one personally, and we'll reply by email within a few days.</li>
+      <li><b>You get your payment details.</b> We'll send everything you need to secure your place, and answer any questions you have.</li>
+      <li><b>Send your deposit to hold your spot.</b> Early Bird pricing holds until 28 August, and places are limited to 14.</li>
+    </ol>
+    <p class="next-note">Keep an eye on <b id="success-email">your inbox</b> (and your spam folder, just in case) for a note from <a href="mailto:info@kenazportal.com">info@kenazportal.com</a>. We can't wait to journey with you.</p>
+  </div>
+</main>
+
+<footer class="mini-foot">© 2026 KENAZ · Breathwork for Healing and Transformation</footer>
+
+<script src="assets/analytics.js"></script>
+<script>
+  (function(){
+    var form = document.getElementById('app-form');
+    var emailEl = document.getElementById('email');
+    var emailErr = document.getElementById('email-err');
+    var formErr = document.getElementById('form-error');
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var ENDPOINT = 'https://formspree.io/f/mrevwwje';
+    function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); }
+
+    var started = false;
+    form.addEventListener('focusin', function(){
+      if(!started){ started = true; if(window.track) window.track('form_start', { page: 'application' }); }
+    });
+    emailEl.addEventListener('input', function(){
+      if(validEmail(emailEl.value)){ emailEl.classList.remove('err'); emailErr.classList.remove('show'); emailEl.removeAttribute('aria-invalid'); }
+    });
+
+    var submitting = false;
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      if(submitting) return;
+      var email = emailEl.value.trim();
+      if(!validEmail(email)){
+        emailEl.classList.add('err'); emailErr.classList.add('show');
+        emailEl.setAttribute('aria-invalid','true'); emailEl.focus(); return;
+      }
+      var name = document.getElementById('name').value.trim();
+      var first = name ? name.split(' ')[0] : '';
+      var room = document.getElementById('room_preference').value || 'Not specified';
+
+      formErr.classList.remove('show');
+      submitting = true;
+      var lbl = submitBtn.innerHTML;
+      submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
+
+      fetch(ENDPOINT, { method:'POST', headers:{'Accept':'application/json'}, body:new FormData(form) })
+        .then(function(res){
+          if(res.ok){
+            if(window.track) window.track('application_submitted', { room: room, page: 'application' });
+            document.getElementById('success-msg').textContent =
+              (first ? first + ', your' : 'Your') + ' application is in. Here’s what happens next.';
+            document.getElementById('success-email').textContent = email;
+            var intro = document.getElementById('form-intro'); if(intro) intro.style.display = 'none';
+            document.getElementById('form-view').style.display = 'none';
+            document.getElementById('success-view').classList.add('show');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+          }
+          return res.json().then(function(d){
+            throw new Error((d && d.errors && d.errors[0] && d.errors[0].message) || 'Submission failed');
+          });
+        })
+        .catch(function(){
+          submitting = false; submitBtn.disabled = false; submitBtn.innerHTML = lbl;
+          formErr.classList.add('show');
+        });
+    });
+  })();
+</script>
+</body>
+</html>
