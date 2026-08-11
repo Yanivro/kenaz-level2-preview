@@ -15,3 +15,5 @@ mqkgwc72-GPBA_Logo_Optimized.webp
 
 # Signup / application exports — contain real personal emails, never commit
 waitlist-signups.csv
+emails/out/
+emails/applicants.csv
