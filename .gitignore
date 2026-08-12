@@ -17,3 +17,10 @@ mqkgwc72-GPBA_Logo_Optimized.webp
 waitlist-signups.csv
 emails/out/
 emails/applicants.csv
+
+# Fear Lab session materials — internal facilitator docs, and the runsheet
+# carries a live Zoom link with its passcode. The repo is public and Pages
+# serves from root, so anything committed here is world-readable.
+session-plan-demo-1-fear-lab.md
+session-runsheet.html
+session-runsheet.artifact.html
