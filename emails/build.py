@@ -35,7 +35,7 @@ FIELDS = [
 ]
 
 SUBJECT = "We have your Level 2 application, {first}"
-PREHEADER = "Your application is in. We'll be in touch to book a discovery call."
+PREHEADER = "Your application is in. The booking link for your discovery call is inside."
 
 
 def norm(key):

@@ -17,10 +17,14 @@ sends every draft himself.
 
 ## The process this email sits inside
 
-Applying is **not** acceptance and **not** a place held. Every applicant gets a
-discovery call with Patricia **or** Yaniv (one of them, not both) to find out if
-it's the right fit, for them and for us. Payment and registration details only
-follow a yes on both sides.
+Applying is **not** acceptance and **not** a place held. Every applicant books a
+discovery call with **Yaniv** to find out if it's the right fit, for them and for
+us. Payment and registration details only follow a yes on both sides.
+
+**Booking link** (goes in every confirmation, and it's the applicant's next
+action — they don't wait for us to write):
+
+    https://cal.com/yaniv-rose-m6ewam/level-2-discovery-call
 
 This exists because someone applied impulsively while overwhelmed and already
 booked onto other retreats — a fast yes she'd likely have regretted. The call is
@@ -29,10 +33,10 @@ rather than processed. Rejections are expected to be rare; the value is in
 hearing where each person actually is.
 
 So the confirmation must never promise payment details next, never imply
-acceptance, and never push for a quick decision. Receipt acknowledged → their
-own answers quoted back → what happens next (we read it personally / we book a
-discovery call / we decide together, and only then payment, Early Bird until
-28 August 2026, 14 places). Signed **Patricia & Yaniv**. Templates live in
+acceptance, and never push for a quick decision. Receipt acknowledged → the
+booking button → their own answers quoted back → what happens next (they book /
+we read it personally before the call / we decide together, and only then
+payment, Early Bird until 28 August 2026, 14 places). Signed **Patricia & Yaniv**. Templates live in
 `emails/confirmation.html.tmpl` and `emails/confirmation.txt.tmpl` — edit those,
 not the rendered output.
 
@@ -91,7 +95,7 @@ at whether the timing is right, not as a hurdle.
 Never invent specifics. Deposit amounts, payment methods and call scheduling are
 not settled — say the call comes first and details follow, or ask Yaniv. If they
 ask to pay now, the honest answer is yes a deposit holds a place, and also that
-we'd like to talk first.
+we'd like to talk first — point them at the booking link.
 
 ### 4. Create the Gmail draft
 
