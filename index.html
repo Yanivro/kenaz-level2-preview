@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>KENAZ · Breathwork Mastery, Level Two</title>
-<meta name="description" content="Breathwork Mastery, Level Two. Chiang Mai, Thailand, 6–20 January 2027. For graduates of Level 1, by invitation. The deeper journey: relational, somatic, trauma-aware. Applications now open." />
+<meta name="description" content="Breathwork Mastery, Level Two. Chiang Mai, Thailand, 6–20 January 2027. For facilitators ready to go deeper. The deeper journey: relational, somatic, trauma-aware. Applications now open." />
 <link rel="icon" href="assets/kenaz/6247a7dbbd6a4724bd88197664e0f6dd.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -153,6 +153,28 @@
   @keyframes breathe{0%,100%{transform:scale(.82);opacity:.55}45%{transform:scale(1.18);opacity:1}55%{transform:scale(1.18);opacity:1}}
   @media (max-width:560px),(max-height:700px){.breathe{display:none}}
 
+  /* ======================= voices ======================= */
+  .voices{padding:clamp(64px,9vw,120px) 0;background:#f6efd9}
+  .voices .eyebrow{color:#8a6c17}
+  .voice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(40px,4.4vw,64px) clamp(36px,5vw,76px);margin-top:clamp(40px,4.6vw,60px)}
+  .voice-grid figure{margin:0;position:relative;padding-top:44px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+  .voice-grid figure::before{content:"\201C";position:absolute;top:-16px;left:-4px;font-family:Georgia,"Times New Roman",serif;font-size:96px;line-height:1;color:var(--accent-deep)}
+  .voice-grid blockquote{margin:0;font-size:clamp(19px,1.6vw,24px);line-height:1.45;font-weight:300;color:var(--ink)}
+  .voice-grid blockquote strong{font-weight:600}
+  .voice-grid figcaption{font-size:14px;font-weight:500;color:var(--ink);padding-top:12px;border-top:1px solid rgba(138,108,23,.35)}
+  .voice-grid figcaption span{display:block;font-weight:400;color:#6b5c33}
+  @media (max-width:700px){.voice-grid{grid-template-columns:minmax(0,1fr)}}
+  /* ======================= faq ======================= */
+  .faq{padding:clamp(64px,9vw,120px) 0}
+  .faq-list{margin-top:clamp(26px,3vw,40px);border-top:1px solid var(--border);max-width:820px}
+  .faq-list details{border-bottom:1px solid var(--border)}
+  .faq-list summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:18px 0;font-weight:400;font-size:clamp(17px,1.3vw,20px)}
+  .faq-list summary::-webkit-details-marker{display:none}
+  .faq-list summary::after{content:"+";color:var(--accent-deep);font-size:1.25em;line-height:1;flex:none}
+  .faq-list details[open] summary::after{content:"\2013"}
+  .faq-list summary:focus-visible{outline:2px solid var(--accent-deep);outline-offset:3px}
+  .faq-list p{padding:0 34px 22px 0;color:#4d4d4d;max-width:66ch}
+  .faq-list a{color:var(--accent-deep);text-decoration:underline;text-underline-offset:3px}
   /* ======================= reveal ======================= */
   .reveal{transition:opacity .9s var(--ease),transform .9s var(--ease)}
   .js .reveal{opacity:0;transform:translateY(22px)}
@@ -184,7 +206,7 @@
   .pull{font-size:clamp(26px,3.4vw,44px);font-weight:200;line-height:1.28;letter-spacing:-.01em;
     margin-top:1.1em;max-width:20ch;text-wrap:balance}
   .pull b{color:var(--accent);font-weight:300}
-  .quote-mark{font-size:60px;color:var(--accent);line-height:0;display:block;height:.4em}
+  .quote-mark{font-family:Georgia,"Times New Roman",serif;font-size:96px;color:var(--accent);line-height:1;display:block;height:.62em}
 
   /* ======================= JOURNEY ARC ======================= */
   .arc{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px);margin-top:clamp(40px,5vw,64px)}
@@ -471,7 +493,7 @@
   <div class="bg"><img src="assets/kenaz/opt/hero.jpg" width="2400" height="1350" fetchpriority="high" decoding="async" alt="A woman with her hand on her heart, breathing, eyes closed, outdoors in soft natural light" /></div>
   <div class="hero-inner">
     <div class="hero-col">
-      <span class="eyebrow on-dark reveal">For graduates of Level 1 · By invitation</span>
+      <span class="eyebrow on-dark reveal">For facilitators ready to go deeper · By application</span>
       <h1 class="reveal d1">Breathwork Mastery,<br>Level&nbsp;Two.</h1>
       <div class="hero-tags reveal d2"><span class="hero-tag"><span class="dot"></span>Chiang Mai, Thailand <span class="tsep">·</span> 6&ndash;20 January 2027</span></div>
       <p class="sub reveal d2">For those ready to hold bigger groups, lead their own retreats, and go further with their clients than any training has taken them. A place to meet yourself, honestly, as a leader, and to learn to teach what you carry.</p>
@@ -510,11 +532,8 @@
 
 <!-- ===================== DARK QUOTE BAND (L1 → L2) ===================== -->
 <section class="band-dark" data-od-id="l1-to-l2">
-  <div class="bg"><img src="assets/kenaz/opt/band-next.jpg" width="1257" height="2000" loading="lazy" decoding="async" alt="" aria-hidden="true" /></div>
+  <div class="bg"><img src="assets/kenaz/opt/band-next.jpg" width="1257" height="2000" loading="lazy" decoding="async" style="object-position:50% 8%" alt="" aria-hidden="true" /></div>
   <div class="wrap">
-    <span class="eyebrow on-dark reveal">The next step</span>
-    <h2 class="reveal d1" style="margin-top:.45em;max-width:18ch">Level 1 gave you the ground. This is the depth.</h2>
-    <p class="body reveal d2">You learned the maps: the breath, the parts, the developmental ground. But the relational and shadow territory got <em class="cap" style="color:var(--accent)">touched</em>, never <em class="cap" style="color:var(--accent)">entered</em>. You feel it with your clients: the moment things move into intimacy, sexuality, or the darker parts, you reach the edge of your own work.</p>
     <span class="quote-mark reveal" aria-hidden="true">“</span>
     <p class="pull reveal d1">You can only take someone as far as you've gone yourself. <b>This is how we go further, together.</b></p>
   </div>
@@ -618,7 +637,8 @@
     <span class="eyebrow on-dark reveal">The shape of it</span>
     <h2 class="reveal d1" style="margin-top:.45em">Two weeks together. Six months to integrate.</h2>
     <p class="dateline reveal d1">Chiang Mai, Thailand · 6–20 January 2027</p>
-    <p class="reveal d1" style="max-width:66ch;margin-top:1.1em;color:rgba(255,255,255,.8);font-size:clamp(15px,1.15vw,17.5px);line-height:1.7">We've redesigned the online structure for Level 2. Where Level 1 kept it light and open, these six months are structured: teachings that pick up where the retreat ends, live demonstrations of the work in motion, and regular practice sessions that put you in the facilitator's seat, with feedback from Yaniv and Patricia, until it becomes how you lead.</p>
+    <p class="reveal d1" style="max-width:66ch;margin-top:1.1em;color:rgba(255,255,255,.8);font-size:clamp(15px,1.15vw,17.5px);line-height:1.7">We've redesigned the online structure for Level 2. These six months are structured: teachings that pick up where the retreat ends, live demonstrations of the work in motion, and regular practice sessions that put you in the facilitator's seat, with feedback from Yaniv and Patricia, until it becomes how you lead.</p>
+    <p class="reveal d1" style="margin-top:1.1em;font-size:clamp(15px,1.15vw,17.5px)"><a href="itinerary.html" data-cta="Shape Sample Itinerary" style="color:var(--accent);text-decoration:underline;text-underline-offset:4px">See what a day could look like</a></p>
     <div class="facts">
       <div class="fact reveal"><div class="big">2 Weeks</div><div class="lbl">In person</div><div class="sub">Chiang Mai, Thailand</div></div>
       <div class="fact reveal d1"><div class="big">6 Months</div><div class="lbl">Online</div><div class="sub">Practicum &amp; mentoring</div></div>
@@ -703,6 +723,22 @@
   </div>
 </section>
 
+<!-- ===================== VOICES ===================== -->
+<section class="voices" id="voices" data-od-id="voices">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">In their words</span>
+      <h2 style="margin-top:.45em">From our previous parts work trainings.</h2>
+    </div>
+    <div class="voice-grid">
+      <figure><blockquote>Excellent facilitators, who lead with <strong>clarity of teaching and generosity of spirit</strong>&hellip; teachers I would &lsquo;follow&rsquo; into deeper learning.</blockquote><figcaption>Tracy <span>Parts work training</span></figcaption></figure>
+      <figure><blockquote>The opportunity to do <strong>a live IFS session in front of the group</strong>&hellip; It was quite scary to take the leap, but I really loved it and it felt so good to hear that it resonated with the group.</blockquote><figcaption>Justin W. <span>Parts work training</span></figcaption></figure>
+      <figure><blockquote>It is, without a doubt, <strong>one of the best workshops I've ever taken</strong> (and that's speaking from over 40 years worth of professional, personal, and spiritual workshops).</blockquote><figcaption>Marianne R. <span>Parts work training</span></figcaption></figure>
+      <figure><blockquote>How deceptively simple the practice is &ndash; so much so that I feel I can use these tools and techniques in my daily life, and <strong>bring them thoughtfully into my professional one too</strong>.</blockquote><figcaption>Dan S. <span>Parts work training</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== PRICING ===================== -->
 <section class="pricing" id="pricing" data-od-id="pricing">
   <div class="wrap">
@@ -741,6 +777,28 @@
   </div>
 </section>
 
+<!-- ===================== FAQ ===================== -->
+<section class="faq" id="faq" data-od-id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Questions</span>
+      <h2 style="margin-top:.45em">Good to know.</h2>
+    </div>
+    <div class="faq-list">
+      <details><summary>Who is this for?</summary><p>Facilitators who want to go deeper and hold more: bigger groups, your own retreats, and the relational and shadow territory with your clients. Tell us about your training and practice in your application, and we'll find out together on the discovery call if it's the right fit.</p></details>
+      <details><summary>What does a day look like?</summary><p>Mornings begin with embodiment and breath, then parts work with Yaniv. Afternoons are breathwork with Patricia, and evenings are circling. <a href="itinerary.html" data-cta="FAQ Sample Itinerary">See three sample days.</a></p></details>
+      <details><summary>Where is it, and how do I get there?</summary><p>La Tierra is a private sanctuary in the hills, about an hour from Chiang Mai, Thailand. You'll need to get yourself to Chiang Mai, and we'll go through the rest of the travel details on your call.</p></details>
+      <details><summary>When should I arrive and leave?</summary><p>We begin on Wednesday 6 January 2027, with arrivals from about 14:00 and an opening ceremony. We finish on Wednesday 20 January, which is departure day.</p></details>
+      <details><summary>What's included in the price?</summary><p>Your seat in the training, your bungalow, all meals for the two weeks at La Tierra, and the full six-month online programme. Flights and travel to La Tierra aren't part of the listed price.</p></details>
+      <details><summary>What's the food like?</summary><p>Every meal is chef-prepared from fresh, locally sourced ingredients. La Tierra is alcohol-free and smoke-free throughout.</p></details>
+      <details><summary>Is there any time off?</summary><p>Yes. Saturday 9 January is a full rest day, and every working day has a two-hour break after lunch. We read the group's energy, and can drop a morning when it needs rest.</p></details>
+      <details><summary>What happens after the two weeks?</summary><p>Six months of structured online practice: teachings, live demonstrations, weekly practice with a buddy group from the retreat, and sessions in the facilitator's seat with feedback from Yaniv and Patricia.</p></details>
+      <details><summary>How do I hold my place?</summary><p>Apply, then book a discovery call to find out if it's the right fit, for you and for us. If it's a yes on both sides, we send payment and registration details, and your deposit holds your place.</p></details>
+      <details><summary>What if money is an issue?</summary><p>Reach out and we'll find a solution with you, including payment plans.</p></details>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== EARLY LOOK / SCARCITY ===================== -->
 <section class="earlylook" data-od-id="early-look">
   <div class="wrap">
@@ -751,7 +809,7 @@
     </div>
     <div class="badges reveal d2">
       <span class="badge"><span class="dot"></span>Only 14 places</span>
-      <span class="badge"><span class="dot"></span>Level 1 graduates only</span>
+      <span class="badge"><span class="dot"></span>Open to facilitators, by application</span>
       <span class="badge"><span class="dot"></span>A discovery call before you pay</span>
       <span class="badge hl"><span class="dot"></span>Late Bloomer until <b>11 November</b></span>
     </div>
