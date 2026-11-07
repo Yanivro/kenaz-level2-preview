@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en" data-page="recordings/befriend">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Befriending Our Shadows · The recording and guide</title>
+<meta name="description" content="The recording of Befriending Our Shadows, with a guide to the first steps in facilitating parts work." />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" href="../../assets/kenaz/6247a7dbbd6a4724bd88197664e0f6dd.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#fafafa; --surface:#fff; --fg:#212121; --body:#4d4d4d; --muted:#737373; --border:#e3e1dc;
+    --accent:#d4af37; --accent-deep:#8f7120; --tint:#f7f2e3; --ink:#1b1b1b; --ink-2:#262626;
+    --font:"Raleway","Nunito Sans","Open Sans",-apple-system,system-ui,sans-serif;
+    --pad:clamp(16px,5vw,80px);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font);font-weight:400;color:var(--fg);background:var(--bg);line-height:1.65;font-size:clamp(16px,1.05vw,18px);-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  b{font-weight:600}
+  .chev path{fill:none;stroke:var(--accent);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+  .chev,.chev svg{display:block}
+
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px var(--pad);border-bottom:1px solid var(--border);background:var(--bg)}
+  .brand{display:flex;align-items:center;gap:10px}
+  .wordmark{letter-spacing:.42em;font-weight:300;font-size:15px}
+  .nav-cta{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border:1px solid var(--accent);color:var(--accent-deep);padding:9px 18px;border-radius:999px;white-space:nowrap}
+  .nav-cta:hover{background:var(--accent);color:#241d05}
+
+  .wrap{max-width:calc(980px + 2*var(--pad));margin:0 auto;padding:0 var(--pad)}
+  .band{padding:clamp(52px,8vw,104px) 0;background:var(--bg);color:var(--fg)}
+  /* Section tones, the same three the Level 2 homepage uses. Each one remaps the tokens below it. */
+  .on-dark{--body:rgba(255,255,255,.82);--muted:rgba(255,255,255,.62);--border:rgba(255,255,255,.18);--accent-deep:var(--accent);--tint:rgba(255,255,255,.07);--fg:#fff;background:var(--ink);color:#fff}
+  .on-warm{--body:#45413a;--muted:#6a6455;--border:#e2d6b1;--accent-deep:#75590f;background:#f6efd9}
+  .page-head{margin-bottom:clamp(32px,5vw,52px)}
+  .eyebrow{display:block;font-size:12px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--accent-deep)}
+  h1,h2{font-weight:300;line-height:1.12;letter-spacing:-.02em}
+  h1{font-size:clamp(38px,6vw,64px);margin-top:.3em}
+  h2{font-size:clamp(28px,3.8vw,40px);margin-top:.3em}
+  h3{font-size:1.06em;font-weight:600;line-height:1.35}
+  .lede{color:var(--body);max-width:62ch;margin-top:1em}
+  .intro{color:var(--body);max-width:62ch;margin-top:.9em}
+  .note{font-size:.92em;color:var(--muted);max-width:62ch;margin-top:1em}
+
+  .jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;list-style:none}
+  .jump a{display:block;font-size:13.5px;font-weight:500;padding:7px 14px;border:1px solid var(--border);border-radius:999px}
+  .jump a:hover{border-color:var(--accent);color:var(--accent-deep)}
+
+  /* Recording */
+  .player{position:relative;aspect-ratio:16/9;background:#000}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .chapters-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 16px;margin-top:26px}
+  .chapters-head p{font-size:.92em;color:var(--muted)}
+  .chapters{list-style:none;margin-top:12px;columns:2;column-gap:32px;border-top:1px solid var(--border)}
+  .chapters li{break-inside:avoid;border-bottom:1px solid var(--border)}
+  .chapters a{display:grid;grid-template-columns:62px minmax(0,1fr);gap:8px;padding:9px 4px;font-size:.95em}
+  .chapters a:hover{background:var(--tint)}
+  .chapters .t{font-variant-numeric:tabular-nums;color:var(--accent-deep);font-weight:600;font-size:.92em;padding-top:1px}
+  .chapters a.now{background:var(--tint)}
+  .privacy{margin-top:20px;padding:14px 18px;background:var(--tint);font-size:.95em;color:var(--body)}
+
+  /* Teaching */
+  .prose{display:grid;gap:clamp(30px,4vw,44px);margin-top:30px}
+  .prose article{max-width:66ch}
+  .prose article p{color:var(--body);margin-top:.55em}
+  .pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+  .panel{background:var(--surface);border:1px solid var(--border);padding:18px 20px;min-width:0}
+  .on-dark .panel{background:var(--tint)}
+  .panel p{color:var(--body);margin-top:.45em}
+  .panel.warm{background:var(--tint);border-color:var(--border)}
+  .pull{font-size:clamp(23px,3vw,31px);font-weight:300;line-height:1.25;letter-spacing:-.01em;color:var(--accent-deep);border-left:2px solid var(--accent);padding-left:20px;max-width:30ch}
+
+  /* The process */
+  .roles{margin-top:26px}
+  .flabel{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px}
+  .checkin{font-size:clamp(19px,2.2vw,23px);font-weight:300;line-height:1.35;margin-top:30px;color:var(--accent-deep)}
+  .steps{list-style:none;display:grid;gap:18px;margin-top:22px}
+  .step{background:var(--surface);border:1px solid var(--border);--tint:#f7f2e3;display:grid;grid-template-columns:156px minmax(0,1fr)}
+  .step-name{padding:20px 18px;border-right:1px solid var(--border)}
+  .step-name .n{display:block;font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--muted)}
+  .step-name .w{display:block;font-size:27px;font-weight:300;line-height:1.15;letter-spacing:-.01em;margin-top:2px}
+  .step-body{padding:20px 22px 22px;min-width:0}
+  .step-body>p{color:var(--body)}
+  .step-body>p+p{margin-top:.6em}
+  .say{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+  .say>div{padding:13px 15px;min-width:0}
+  .say .we{background:var(--bg)}
+  .say .know{background:var(--tint)}
+  .say p{font-size:.96em}
+  .say p+p{margin-top:.5em}
+  .say .go{font-weight:600;color:var(--accent-deep)}
+
+  .sub{margin-top:clamp(38px,5vw,56px)}
+  .sub>p{color:var(--body);max-width:62ch;margin-top:.7em}
+  .sub h3.big{font-size:clamp(23px,2.8vw,29px);font-weight:300;letter-spacing:-.01em}
+  .cs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:16px;list-style:none}
+  .cs li{background:var(--surface);padding:10px 6px;text-align:center;font-weight:500;font-size:.92em;overflow-wrap:anywhere}
+  .numbered{list-style:none;counter-reset:n;display:grid;gap:0;margin-top:16px;border-top:1px solid var(--border)}
+  .numbered li{counter-increment:n;display:grid;grid-template-columns:38px minmax(0,1fr);padding:13px 0;border-bottom:1px solid var(--border)}
+  .numbered li::before{content:counter(n);font-size:22px;font-weight:200;line-height:1.15;color:var(--accent-deep)}
+  .numbered p{color:var(--body)}
+  .bullets{list-style:none;margin-top:14px;display:grid;gap:8px;max-width:62ch}
+  .bullets li{padding-left:20px;position:relative;color:var(--body)}
+  .bullets li::before{content:"";position:absolute;left:2px;top:.8em;width:8px;height:1px;background:var(--accent-deep)}
+  .care{background:var(--ink-2);color:#fff;padding:20px 22px;margin-top:clamp(34px,4vw,46px)}
+  .care p{color:rgba(255,255,255,.82);margin-top:.4em}
+
+  /* In the rooms */
+  .notes{margin-top:24px;border-top:1px solid var(--border)}
+  .msg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:12px 28px;padding:16px 0;border-bottom:1px solid var(--border)}
+  .msg .said{font-size:1.1em;line-height:1.35;color:var(--accent-deep);font-weight:500}
+  .msg .why{color:var(--body)}
+
+  /* Questions */
+  .qa{margin-top:24px;border-top:1px solid var(--border)}
+  .qa details{border-bottom:1px solid var(--border)}
+  .qa summary{cursor:pointer;font-weight:600;padding:15px 34px 15px 0;list-style:none;position:relative;line-height:1.4}
+  .qa summary::-webkit-details-marker{display:none}
+  .qa summary::after{content:"+";position:absolute;right:6px;top:11px;font-size:23px;font-weight:300;color:var(--accent-deep)}
+  .qa details[open] summary::after{content:"\2212"}
+  .qa details p{color:var(--body);padding-bottom:18px;max-width:64ch}
+
+  /* Keep going */
+  .close.on-dark{background:var(--ink-2)}
+  .close p{color:var(--body);max-width:58ch;margin-top:.9em}
+  .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .btn{display:inline-block;background:var(--accent);color:#241d05;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:13px 26px;border-radius:999px;text-align:center}
+  .btn:hover{background:#fff}
+  .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)}
+  .btn.ghost:hover{background:#fff;color:#241d05}
+
+  .close p.source{font-size:.86em;color:var(--muted);max-width:70ch;margin-top:30px;padding-top:20px;border-top:1px solid var(--border)}
+  footer{background:var(--ink);color:rgba(255,255,255,.6);padding:26px var(--pad);font-size:13px;text-align:center}
+  :focus-visible{outline:2px solid var(--accent-deep);outline-offset:3px}
+
+  @media (max-width:720px){
+    .chapters{columns:1}
+    .pair,.say,.msg{grid-template-columns:minmax(0,1fr)}
+    .step{grid-template-columns:minmax(0,1fr)}
+    .step-name{border-right:none;border-bottom:1px solid var(--border);display:flex;align-items:baseline;gap:12px;padding:13px 18px}
+    .step-body{padding:16px 18px 18px}
+    .cs{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .actions .btn{width:100%}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="../../index.html" aria-label="KENAZ home">
+    <span class="chev" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span>
+    <span class="wordmark">KENAZ</span>
+  </a>
+  <a class="nav-cta" href="../../index.html" data-cta="Session Nav Level 2">Level 2</a>
+</nav>
+
+<main>
+  <section class="band on-dark" id="recording"><div class="wrap">
+  <header class="page-head">
+    <span class="eyebrow">Recording and guide</span>
+    <h1>Befriending Our Shadows</h1>
+    <p class="lede">The first steps in facilitating parts work, recorded on 5 November 2026. It isn't about understanding parts in the mind. It's about embodying this, which is why working on your own parts matters as you get better at working with other people's.</p>
+    <ul class="jump" aria-label="On this page">
+      <li><a href="#recording">The recording</a></li>
+      <li><a href="#teaching">What we explored</a></li>
+      <li><a href="#process">The process</a></li>
+      <li><a href="#rooms">In the rooms</a></li>
+      <li><a href="#questions">Your questions</a></li>
+      <li><a href="#level-2">Level 2</a></li>
+    </ul>
+  </header>
+
+    <div class="player" id="player">
+      <iframe id="video" src="https://www.youtube-nocookie.com/embed/WK-lHnM82pc?rel=0&amp;cc_load_policy=1" title="Befriending Our Shadows recording" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <p class="privacy">People shared openly in this session, so please keep this page to yourself.</p>
+
+    <div class="chapters-head">
+      <h2>Chapters</h2>
+      <p>Choose one to jump to it. Subtitles are on.</p>
+    </div>
+    <ol class="chapters" id="chapters">
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=0" data-t="0"><span class="t">0:00</span><span>Welcome</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=54" data-t="54"><span class="t">0:54</span><span>The parts reflection exercise</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=87" data-t="87"><span class="t">1:27</span><span>Parts reflection: how it was</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=330" data-t="330"><span class="t">5:30</span><span>Kindergarten teacher or parent</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=514" data-t="514"><span class="t">8:34</span><span>Self-leadership: from string to sweater</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=691" data-t="691"><span class="t">11:31</span><span>No bad parts</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=867" data-t="867"><span class="t">14:27</span><span>Knowing isn't enough</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=981" data-t="981"><span class="t">16:21</span><span>The Fs: Find</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=1109" data-t="1109"><span class="t">18:29</span><span>The Fs: Focus</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=1267" data-t="1267"><span class="t">21:07</span><span>The Fs: Feel and the 8 Cs</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=1441" data-t="1441"><span class="t">24:01</span><span>When another part is in the way</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=1736" data-t="1736"><span class="t">28:56</span><span>Setting up the practice</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=2053" data-t="2053"><span class="t">34:13</span><span>In the rooms: first practice</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=2164" data-t="2164"><span class="t">36:04</span><span>In the rooms: second practice</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=2407" data-t="2407"><span class="t">40:07</span><span>In the rooms: third practice</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=2601" data-t="2601"><span class="t">43:21</span><span>What people noticed</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=2820" data-t="2820"><span class="t">47:00</span><span>Q&amp;A: choosing a part</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=2880" data-t="2880"><span class="t">48:00</span><span>Q&amp;A: is anger negative?</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=3041" data-t="3041"><span class="t">50:41</span><span>Polarities and the boardroom</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=3299" data-t="3299"><span class="t">54:59</span><span>What people noticed, continued</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=3506" data-t="3506"><span class="t">58:26</span><span>Q&amp;A: getting to know a part</span></a></li>
+      <li><a href="https://youtu.be/WK-lHnM82pc?t=3664" data-t="3664"><span class="t">1:01:04</span><span>Closing</span></a></li>
+    </ol>
+  </div></section>
+
+  <section class="band" id="teaching"><div class="wrap">
+    <span class="eyebrow">Companion</span>
+    <h2>What we explored</h2>
+    <div class="prose">
+      <article>
+        <h3>Where we started: the parts reflection</h3>
+        <p>One person shares freely. The other listens for parts and reflects back: "This is what I hear. It might not be right. You've got this part, this part, and this part. How is it to hear that?" It isn't about being right or wrong. It starts to untangle what was one big knot.</p>
+        <p>You may notice your own parts getting triggered as you listen, through resonance or resistance. Notice it, and don't let it take over.</p>
+      </article>
+      <article>
+        <h3>From a ball of string to a sweater</h3>
+        <p>The purpose of IFS is what we call Self-leadership: a deeper, Self-led relationship with our parts. Parts want to be seen, understood and acknowledged. They don't want to stay in the shadow. They want to be an integrated part of the system.</p>
+        <p>Think of a ball of tangled string, and a sweater where you know every stitch. We can't turn the ball into a sweater until we've untangled it. That's the first step. When there's a relationship with a part, we can go further, toward the place where it's frozen in the past. A critic isn't talking to you as you are today. It's still protecting a child.</p>
+      </article>
+      <div>
+        <h3>Kindergarten teacher or parent</h3>
+        <div class="pair">
+          <div class="panel">
+            <h3>The kindergarten teacher</h3>
+            <p>"At some point this one will go away. The parent will come and pick them up." It's easier: someone will rescue me, or I'll be able to push this part aside.</p>
+          </div>
+          <div class="panel warm">
+            <h3>The parent</h3>
+            <p>"I am the one responsible for this part: to nourish it, to work with it, to love it." It's harder, and it's what Self-leadership asks of us.</p>
+          </div>
+        </div>
+        <p class="intro">When a child screams in the supermarket aisle, part of the parent hates the child in that moment. In healthy parents, that part isn't driving the bus. Part of them is challenged, and part of them still loves and cares. We learn to turn toward both.</p>
+      </div>
+      <p class="pull">There are no bad parts.</p>
+      <article>
+        <p>All parts, even the ones we hate, are at their core trying to protect us and help the system. They're using strategies that were crucial in the past and aren't serving us now. Because those strategies hurt, other parts hate them, and that's why we end up saying, "this part is holding me back."</p>
+      </article>
+      <article>
+        <h3>Knowing isn't enough</h3>
+        <p>I might know in my mind that a monster part is really a little child, because I read it in all the books. That doesn't mean I feel it, or can relate to the part that way. We have to embody it, and that means practice.</p>
+      </article>
+      <article>
+        <h3>Why a facilitator helps</h3>
+        <p>It's much easier for me to bring love and care to your inner critic than it is for you. So I help by modeling it, and by being someone willing to see the part while you watch. I'm bringing my Self energy in. If your part triggers me, I can't do that, which is why this work starts with our own parts.</p>
+      </article>
+    </div>
+  </div></section>
+
+  <section class="band on-warm" id="process"><div class="wrap">
+    <span class="eyebrow">Guide</span>
+    <h2>The process: befriending a part</h2>
+    <p class="intro">This is the first step of doing IFS with someone. We practiced the first three Fs in the session. Befriend and Find out take it further. You can do this with a partner, one of you in each role.</p>
+
+    <div class="pair roles">
+      <div class="panel">
+        <h3>The explorer</h3>
+        <p>Turn inward and say out loud what you notice. Everything is optional, including answering.</p>
+      </div>
+      <div class="panel">
+        <h3>The companion</h3>
+        <p>Read the questions slowly, then wait. No fixing, no advice, no interpreting. Silence is good.</p>
+      </div>
+    </div>
+
+    <p class="checkin">After each F, ask: Have we finished this F? How do we know?</p>
+
+    <ol class="steps">
+      <li class="step">
+        <div class="step-name"><span class="n">1</span><span class="w">Find</span></div>
+        <div class="step-body">
+          <p>Notice which part is here. Noticing it already helps it unblend. We often begin with the old view: "It's annoying me, it stops me from being who I am." Direct the person to find the part, through a sensation in the body or an image. We call this a trailhead. Just one small thing is enough. There's no right or wrong.</p>
+          <div class="say">
+            <div class="we"><span class="flabel">What we say</span>
+              <p>"What part would you like to get to know today? Maybe the one that's hardest to be with."</p>
+              <p>"How do you experience this part? Is there a sensation in your body, or an image?"</p>
+            </div>
+            <div class="know"><span class="flabel">How we know to move on</span>
+              <p>You can say "there's a part of me that..." and point to how you sense it.</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-name"><span class="n">2</span><span class="w">Focus</span></div>
+        <div class="step-body">
+          <p>Focus expands Find. What matters here is that the person doesn't go into the mind and interpret, because that moves away from the present moment. Come back to the embodied experience, and use imagination.</p>
+          <p>You can offer words, like tingly, stabby or dense. Even when they're wrong, they help: "It's not dense, it's actually more airy." The more tangible it gets, the more there is to relate to.</p>
+          <div class="say">
+            <div class="we"><span class="flabel">What we say</span>
+              <p>"Find the experience in your body. Is it OK to focus on it now?"</p>
+              <p>"What sensation? What color? Is there a sound, a shape, a weight? Does it move? Is it heavy or light? Is there a kinetic energy?"</p>
+            </div>
+            <div class="know"><span class="flabel">How we know to move on</span>
+              <p>Your attention is resting on it, and you've noticed at least one more detail about it.</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-name"><span class="n">3</span><span class="w">Feel</span></div>
+        <div class="step-body">
+          <p>This is the crucial step, because it tells us where to go. Now there's me and there's the part, and I can notice our current relationship.</p>
+          <div class="say">
+            <div class="we"><span class="flabel">What we say</span>
+              <p>"How do you feel toward this part?"</p>
+              <p>"Is there space for it?"</p>
+            </div>
+            <div class="know"><span class="flabel">How we know to move on</span>
+              <p>You can name at least one of the 8 Cs toward it, even faintly.</p>
+              <p class="go"><a href="#no-space">If not, see "When there's no space yet".</a></p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-name"><span class="n">4</span><span class="w">Befriend</span></div>
+        <div class="step-body">
+          <p>Create the relationship, and let the part know you're here.</p>
+          <div class="say">
+            <div class="we"><span class="flabel">What we say</span>
+              <p>"Let the part know you'd like to get to know it."</p>
+              <p>"Is it aware of you?" If not: "Invite it to notice you're here."</p>
+              <p>"Take your time. Be with it in whatever way feels right."</p>
+            </div>
+            <div class="know"><span class="flabel">How we know to move on</span>
+              <p>The part seems aware of you, and you feel some contact with it. It doesn't have to trust you yet.</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="step">
+        <div class="step-name"><span class="n">5</span><span class="w">Find out</span></div>
+        <div class="step-body">
+          <p>Ask the part about its job, and let the answer come from the part.</p>
+          <div class="say">
+            <div class="we"><span class="flabel">What we say</span>
+              <p>"Ask the part: what's your job in the system? What are you hoping to do for me?"</p>
+            </div>
+            <div class="know"><span class="flabel">How we know we're done</span>
+              <p>An answer came from the part, not from your thinking. If it isn't ready to say, that counts too.</p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ol>
+
+    <div class="care">
+      <h3>If something young or very tender shows up</h3>
+      <p>Don't go there today. Let it know you see it, ask it to turn the volume down, and promise to come back to it with support. You can stop at any point.</p>
+    </div>
+
+    <div class="sub">
+      <h3 class="big">Closing the round</h3>
+      <ul class="bullets">
+        <li><b>Explorer:</b> thank the part, and any part that stepped back for you.</li>
+        <li><b>Companion:</b> "Being with you this whole time, I feel..."</li>
+        <li><b>Explorer:</b> "What it was like for me was..." Then switch roles.</li>
+      </ul>
+    </div>
+
+    <div class="sub">
+      <h3 class="big">The 8 Cs of Self</h3>
+      <p>These are signs of Self energy. One is enough, even faintly.</p>
+      <ul class="cs">
+        <li>Curiosity</li><li>Calm</li><li>Clarity</li><li>Compassion</li>
+        <li>Confidence</li><li>Courage</li><li>Creativity</li><li>Connectedness</li>
+      </ul>
+      <p>Sometimes you can steer what's here toward a C. "I feel sad for it." "Do you feel compassion toward it?" If yes, there's some Self energy, and we can keep relating to the part.</p>
+    </div>
+
+    <div class="sub" id="no-space">
+      <h3 class="big">When there's no space yet</h3>
+      <p>If what comes up is "I hate it", "I want it gone", "It's right about me" or "I should be more compassionate", then another part is standing in front of Self energy. Nothing's gone wrong.</p>
+      <ol class="numbered">
+        <li><div><h3>Notice the part that's reacting</h3><p>"Can you sense the part that hates or fears it?"</p></div></li>
+        <li><div><h3>Understand it, and let it know</h3><p>"Does it make sense why it feels that way? Let it know you understand."</p></div></li>
+        <li><div><h3>Ask it to soften</h3><p>"Are you willing to soften or relax, just for a few minutes?" The yes has to come from the part, not from what I think. So take a moment and feel into it.</p></div></li>
+        <li><div><h3>Check again</h3><p>"How do you feel toward the first part now?"</p></div></li>
+        <li><div><h3>If it isn't willing, it becomes the new focus</h3><p>"This is the part that needs space right now. Is it OK to turn toward it instead?" We don't push parts away, so go back to Focus with this part. There's no way around it. It may need to be understood, and to release some of what it has carried, before it trusts Self with the first one.</p></div></li>
+      </ol>
+    </div>
+
+    <div class="sub">
+      <h3 class="big">How to choose a part</h3>
+      <ul class="bullets">
+        <li>Feel into your body and notice what's alive right now.</li>
+        <li>Choose a part you're challenged by, like anxiety or an inner critic.</li>
+        <li>Ask someone: "Which part do you feel most curious about, or most resistant to?"</li>
+      </ul>
+      <p>If someone moves between many parts, you can name it: "I notice you're moving between parts. Is there one you'd want to focus on?"</p>
+    </div>
+
+    <div class="sub">
+      <p class="pull">You first have to learn how to draw before you can paint.</p>
+      <p>This is a creative process, and at the start your brain has to work and comes in front of your flow. You have to learn to use the brush before you can let it use you. So stumble in the dark. It might not go perfectly, and that's great.</p>
+    </div>
+  </div></section>
+
+  <section class="band on-dark" id="rooms"><div class="wrap">
+    <span class="eyebrow">In the rooms</span>
+    <h2>What I wrote during the practice, and why</h2>
+    <p class="intro">While people practiced, I came into the rooms and sent companions private messages. You'll see them on screen in the recording. Here they are together.</p>
+    <div class="notes">
+      <div class="msg"><p class="said">"Ask if they understand how the part feels."</p><p class="why">Create space for the part to feel whatever it's feeling, without needing to change. That creates more safety for parts, once they know Self has space and understands the feeling without trying to change it.</p></div>
+      <div class="msg"><p class="said">"Ask what the experience of the fear is. What is the sensation?"</p><p class="why">We want to move away from thoughts, interpretations and explanations, and into embodied sensation in the present moment. So we focus on the experience of the emotion and the sensation.</p></div>
+      <div class="msg"><p class="said">"Ask if they can share the compassion with the fear."</p><p class="why">Once you notice there's Self energy, you want it to be not just in the Self but part of the relationship. When we share that compassion, the part is touched by the energy of Self, not just observed or witnessed by it.</p></div>
+      <div class="msg"><p class="said">"And if it's able to receive it."</p><p class="why">Notice the experience of being touched by the energy of Self. If it's true Self energy and the part isn't blocking it in some way, it will have some kind of positive effect.</p></div>
+      <div class="msg"><p class="said">"Let it know it's OK that it feels this way."</p><p class="why">We can feel whatever is here, whether it's fear, pain or anything else, and it's welcome. We'll be with it, and we don't want to change it.</p></div>
+      <div class="msg"><p class="said">"Can you ask if the anger can relax for right now, and soften?"</p><p class="why">So the feeling of protection can dissipate in this moment, since there was nothing to protect from. It helps us connect better with the part when the protector isn't in the way.</p></div>
+      <div class="msg"><p class="said">"See if they can share the compassion with the child."</p><p class="why">The same as above: the part is touched by the energy of Self.</p></div>
+    </div>
+    <div class="panel warm" style="margin-top:22px">
+      <h3>What these have in common</h3>
+      <p>From thoughts to sensation. From noticing Self energy to sharing it. And from trying to change a part to making room for it as it is.</p>
+    </div>
+  </div></section>
+
+  <section class="band" id="questions"><div class="wrap">
+    <span class="eyebrow">Your questions</span>
+    <h2>What came up afterward</h2>
+    <div class="qa">
+      <details><summary>What's the objective? I can sit and have tea with a part. What happens then?</summary><p>Self-leadership. First we untangle and relate, as you're doing. Then we can go to the place the part is most afraid of, where it's frozen in the past.</p></details>
+      <details><summary>If there's something negative toward a part, is that still Self energy?</summary><p>It means there's another part, holding some negative energy. Self energy emerges naturally in all of us. The question is how to access it.</p></details>
+      <details><summary>Is anger always negative? Mine felt protective, almost like Self.</summary><p>I don't think anger is negative. A part that wants to protect is beautiful. And I ask myself: is this relevant to the present moment? Is there something to protect from right now? Usually there isn't, so I ask if the anger can relax while we explore. Anger is a protective emotion, so there's something underneath it, maybe sadness or fear.</p></details>
+      <details><summary>What if two parts want opposite things?</summary><p>That's a polarity, and we can ping-pong between them for a long time. When we meet each part and understand what it wants and why, we often find their purpose is very similar: to help and protect us. In a technique we call the boardroom, you sit both parts down with Self. One speaks while the other listens, and then they switch. You're a kind of couples therapist for your parts.</p></details>
+      <details><summary>Did I choose the wrong thing to focus on?</summary><p>There's no wrong way to focus on a part and try to understand it. Think of Snape in Harry Potter: we hate him until we learn his history and intentions. It's the same with a part. It's not just you listening. All of your parts are the audience. The more the system knows a part, the more it can connect with it, and with Self.</p></details>
+    </div>
+    <div class="panel warm" style="margin-top:22px">
+      <h3>We are a self-correcting system</h3>
+      <p>Correction happens by itself, but the system needs to observe that there's something to correct. When we see a problem and don't want to look at it, we stop our own corrective powers from coming in. Even starting to separate, "this part and this part are here," can bring more Self energy and more curiosity.</p>
+    </div>
+  </div></section>
+
+  <section class="band close on-dark" id="level-2"><div class="wrap">
+    <span class="eyebrow">If you want to keep going</span>
+    <h2>Learn to hold a full session</h2>
+    <p>Learning to hold this well takes practice, with people who can see you do it and give you feedback. In Level 2 we go through the whole process of how to facilitate this, with a lot of practice, so you can hold a full session.</p>
+    <p>Two weeks together with Patricia and me at La Tierra in Chiang Mai, 6–20 January 2027, then six months of online practice and mentoring.</p>
+    <div class="actions">
+      <a class="btn" href="../../index.html" data-cta="Session Level 2">Read about Level 2</a>
+      <a class="btn ghost" href="../../itinerary.html" data-cta="Session Itinerary">See what a day could look like</a>
+    </div>
+    <p class="source">Drawn from Internal Family Systems (Richard Schwartz) and the IFS Level 1 handout by Nancy Sowell, LICSW, and from the session on 5 November 2026. Prefer it on paper? <a href="https://drive.google.com/file/d/1-PDLjGE7beHuJqAo3UcQYrsS8NhvVmPB/view?usp=sharing" style="text-decoration:underline;text-underline-offset:3px" data-cta="Session Companion PDF">Download the companion PDF</a>.</p>
+  </div></section>
+</main>
+
+<footer>© 2026 KENAZ · Breathwork for Healing and Transformation</footer>
+<script>
+  /* Chapter links jump the embedded player. Without JS they open YouTube at that time. */
+  (function () {
+    var video = document.getElementById('video');
+    var player = document.getElementById('player');
+    var base = 'https://www.youtube-nocookie.com/embed/WK-lHnM82pc?rel=0&cc_load_policy=1&autoplay=1&start=';
+    document.getElementById('chapters').addEventListener('click', function (ev) {
+      var link = ev.target.closest('a[data-t]');
+      if (!link) return;
+      ev.preventDefault();
+      video.src = base + link.getAttribute('data-t');
+      var current = document.querySelector('.chapters a.now');
+      if (current) { current.classList.remove('now'); current.removeAttribute('aria-current'); }
+      link.classList.add('now');
+      link.setAttribute('aria-current', 'true');
+      player.scrollIntoView({ block: 'start' });
+    });
+  })();
+</script>
+<script src="../../assets/analytics.js"></script>
+</body>
+</html>

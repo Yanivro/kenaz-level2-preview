@@ -11,7 +11,7 @@
 
   var gaOn      = /^G-[A-Z0-9]{6,}$/.test(GA4_ID);
   var clarityOn = /^[a-z0-9]{6,}$/i.test(CLARITY_ID);
-  var page = (location.pathname.split('/').pop() || 'index.html');
+  var page = document.documentElement.getAttribute('data-page') || (location.pathname.split('/').pop() || 'index.html');
 
   window.dataLayer = window.dataLayer || [];
   function gtag(){ dataLayer.push(arguments); }
