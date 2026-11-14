@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//KENAZ//Somatic Inquiry Webinar//EN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:kenaz-somatic-inquiry-20261122@somatic-inquiry.pages.dev
+DTSTAMP:20261112T000000Z
+DTSTART:20261122T130000Z
+DTEND:20261122T140000Z
+SUMMARY:Somatic Inquiry for Breathwork Facilitators (Patricia & Yaniv)
+DESCRIPTION:Free live webinar. The video link will be emailed to you before we start. https://level2.yanivrose.com/somatic-inquiry/
+LOCATION:Online (link by email)
+URL:https://level2.yanivrose.com/somatic-inquiry/
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:Somatic Inquiry webinar starts in 30 minutes
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Somatic Inquiry Webinar</title>
+<meta name="description" content="Free live webinar for breathwork facilitators with Patricia and Yaniv. A simple somatic tool for when a client finishes a session in a challenging place. Sunday 22 November, 7am Costa Rica, 2pm CET, 8pm Thailand.">
+<meta property="og:title" content="Somatic Inquiry for Breathwork Facilitators · Free live webinar">
+<meta property="og:description" content="One hour, hands-on, with Patricia & Yaniv. Sunday 22 November · 7am Costa Rica · 2pm CET · 8pm Thailand.">
+<meta property="og:image" content="https://level2.yanivrose.com/somatic-inquiry/hero.jpg">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#fafafa; --surface:#fff; --fg:#212121; --muted:#737373; --border:#e3e1dc; --hair:#d9d9d9;
+          --accent:#d4af37; --accent-deep:#b8932a; --ink:#1b1b1b; --ink-2:#262626;
+          --pad:clamp(20px,5vw,80px); --maxw:1180px; --ease:cubic-bezier(.22,.61,.36,1); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Raleway, system-ui, sans-serif; font-weight: 300; color: var(--fg); background: var(--bg); line-height: 1.65;
+         font-size: clamp(16px,1.05vw,18px); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
+  section { padding: clamp(64px,9vw,120px) 0; }
+  .eyebrow { font-size: clamp(11px,.78vw,12.5px); font-weight: 500; letter-spacing: .32em; text-transform: uppercase; color: var(--accent-deep); display: inline-block; }
+  .on-dark .eyebrow, .eyebrow.on-dark { color: var(--accent); }
+  h1, h2, h3 { font-weight: 300; line-height: 1.12; letter-spacing: -.01em; }
+  h1 { font-size: clamp(36px,5.6vw,68px); letter-spacing: -.025em; }
+  h2 { font-size: clamp(30px,4vw,50px); letter-spacing: -.02em; margin-top: .4em; text-wrap: balance; }
+  h3 { font-size: clamp(19px,1.5vw,22px); }
+  em.cap { font-style: normal; font-weight: 500; letter-spacing: .06em; color: var(--accent-deep); }
+  .lead { font-size: clamp(17px,1.4vw,20px); color: var(--muted); max-width: 58ch; margin-top: 1em; }
+  .chev { display: inline-block; vertical-align: middle; }
+  .chev svg { display: block; }
+  .chev path { fill: none; stroke: var(--accent); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+  .btn { display: inline-flex; align-items: center; gap: .7em; font: inherit; font-weight: 500; font-size: 14px; letter-spacing: .12em; text-transform: uppercase;
+         padding: 16px 30px; border-radius: 2px; cursor: pointer; border: 1px solid var(--accent); background: var(--accent); color: #241d05; transition: .4s var(--ease); }
+  .btn:hover { background: transparent; color: var(--accent); }
+  .btn .arr { transition: transform .4s var(--ease); }
+  .btn:hover .arr { transform: translateX(4px); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  /* nav */
+  .nav { position: absolute; inset: 0 0 auto 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; padding: 20px var(--pad); color: #fff; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 15px; letter-spacing: .42em; font-weight: 400; }
+  .brand .tag { font-size: 9.5px; letter-spacing: .2em; border: 1px solid rgba(255,255,255,.45); padding: 3px 7px; border-radius: 2px; }
+  .nav-cta { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; border: 1px solid rgba(255,255,255,.55); padding: 10px 16px; border-radius: 2px; }
+
+  /* hero */
+  .hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; padding: 120px 0 clamp(56px,9vh,104px); color: #fff; overflow: hidden; background: var(--ink); }
+  .hero .bg { position: absolute; inset: 0; background: url(hero.jpg) 62% 30% / cover; }
+  .hero::after { content: ""; position: absolute; inset: 0;
+    background: linear-gradient(105deg,rgba(20,17,13,.84) 0%,rgba(20,17,13,.55) 45%,rgba(20,17,13,.08) 75%), linear-gradient(to top,rgba(20,17,13,.75),rgba(20,17,13,0) 45%); }
+  .hero .wrap { position: relative; z-index: 2; width: 100%; }
+  .hero-col { max-width: 720px; }
+  .hero h1 { margin: .35em 0 .4em; text-wrap: balance; }
+  .hero .sub { font-size: clamp(17px,1.6vw,22px); max-width: 46ch; color: rgba(255,255,255,.9); }
+  .hero-tag { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-top: 1.4em; border: 1px solid rgba(255,255,255,.4); border-radius: 2px;
+              padding: 8px 14px; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
+  .hero-tag .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+  .hero-tag .sep { opacity: .45; }
+  .local { font-size: 13px; color: rgba(255,255,255,.66); margin-top: .7em; min-height: 1.4em; }
+  .hero-actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; margin-top: 1.8em; }
+  .micro { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.72); }
+  .micro b { color: var(--accent); font-weight: 500; }
+
+  /* for you */
+  .split { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(36px,6vw,96px); align-items: center; }
+  .check { list-style: none; margin-top: 2em; }
+  .check li { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start; padding: 15px 0; border-top: 1px solid var(--border); }
+  .check li:last-child { border-bottom: 1px solid var(--border); }
+  .check .chev { margin-top: 4px; }
+  .media img { width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 2px; }
+
+  /* shift band */
+  .shift { position: relative; color: #fff; background: var(--ink-2); overflow: hidden; }
+  .shift .bg { position: absolute; inset: 0; background: url(band-candles.jpg) 50% 60% / cover; opacity: .3; }
+  .shift::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg,rgba(20,18,16,.72),rgba(20,18,16,.86)); }
+  .shift .wrap { position: relative; z-index: 2; }
+  .shift .body { max-width: 62ch; color: rgba(255,255,255,.8); margin-top: 1em; }
+  .pair { display: grid; grid-template-columns: 1fr auto 1fr; gap: clamp(16px,3vw,40px); align-items: stretch; margin-top: clamp(36px,5vw,56px); }
+  .pair .side { border: 1px solid rgba(255,255,255,.16); border-radius: 2px; padding: clamp(22px,3vw,34px); background: rgba(20,18,16,.45); }
+  .pair .lbl { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; font-weight: 500; }
+  .pair q { display: block; font-size: clamp(18px,1.6vw,22px); line-height: 1.45; quotes: "\201C" "\201D"; }
+  .pair .side + .side q, .pair .after q { color: #fff; }
+  .pair .before q { color: rgba(255,255,255,.62); }
+  .pair .mid { display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 26px; }
+
+  /* the hour */
+  .hour { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 2px; overflow: hidden; margin-top: clamp(36px,5vw,56px); }
+  .step { background: var(--surface); padding: clamp(24px,2.4vw,34px); display: flex; flex-direction: column; }
+  .step .n { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: var(--accent-deep); font-weight: 500; }
+  .step h3 { margin: 12px 0 8px; }
+  .step p { color: var(--muted); font-size: 15px; line-height: 1.6; }
+  .step.do { background: var(--ink); color: #fff; }
+  .step.do p { color: rgba(255,255,255,.74); }
+  .step.do .n { color: var(--accent); }
+
+  /* prompts */
+  .prompts { list-style: none; margin-top: 2em; display: grid; gap: 10px; }
+  .prompts li { background: var(--surface); border: 1px solid var(--border); border-left: 2px solid var(--accent); border-radius: 2px; padding: 16px 20px; font-size: clamp(16px,1.2vw,18px); }
+
+  /* hosts */
+  .hosts-sec { padding-top: 0; }
+  .rule { height: 1px; background: var(--hair); max-width: calc(var(--maxw) - 2*var(--pad)); margin: 0 auto clamp(64px,9vw,120px); }
+  .fac-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px,4vw,56px); margin-top: clamp(32px,4vw,48px); }
+  .fac { display: grid; grid-template-columns: 170px 1fr; gap: 24px; align-items: start; }
+  .fac img { width: 170px; aspect-ratio: 4/5; object-fit: cover; border-radius: 2px; }
+  .fac .name { font-size: 22px; font-weight: 400; }
+  .fac .role { font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-deep); margin: 6px 0 12px; font-weight: 500; }
+  .fac .bio { font-size: 15px; color: var(--muted); line-height: 1.6; }
+  .l2 { margin-top: clamp(40px,5vw,64px); display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .l2 img { width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 2px; }
+  .l2note { margin-top: clamp(28px,3vw,40px); border-top: 1px solid var(--border); padding-top: 22px; display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; align-items: baseline; }
+  .l2note p { color: var(--muted); max-width: 66ch; font-size: 15.5px; }
+  .l2note a { font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase; font-weight: 500; color: var(--accent-deep); white-space: nowrap; }
+
+  /* form band */
+  .seat { background: var(--ink); color: #fff; }
+  .seat .split { align-items: start; }
+  .seat .lead { color: rgba(255,255,255,.75); }
+  .seat .when { margin-top: 1.6em; display: grid; gap: 1px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.14); border-radius: 2px; }
+  .seat .when div { background: var(--ink); padding: 14px 18px; display: flex; justify-content: space-between; gap: 12px; font-size: 15px; }
+  .seat .when span { color: rgba(255,255,255,.6); text-align: right; }
+  .card { background: var(--ink-2); border: 1px solid rgba(255,255,255,.12); border-radius: 2px; padding: clamp(22px,3vw,36px); }
+  .card h2.t, .reflect h2 { font-size: 11.5px; letter-spacing: .26em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin: 0 0 14px; }
+  label.f { display: block; font-size: 13px; font-weight: 500; margin: 0 0 6px; color: rgba(255,255,255,.85); }
+  input[type=text], input[type=email], textarea { width: 100%; font: inherit; font-size: 16px; color: #fff; background: rgba(255,255,255,.04);
+         border: 1px solid rgba(255,255,255,.22); border-radius: 2px; padding: 13px 14px; margin-bottom: 16px; }
+  textarea { min-height: 92px; resize: vertical; }
+  input:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  fieldset { border: 0; margin: 0 0 20px; }
+  legend { font-size: 15px; margin-bottom: 9px; color: rgba(255,255,255,.92); }
+  .opts { display: flex; flex-wrap: wrap; gap: 7px; }
+  .opts label { position: relative; }
+  .opts input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+  .opts span { display: block; padding: 9px 13px; border: 1px solid rgba(255,255,255,.2); border-radius: 2px; font-size: 14px; cursor: pointer; color: rgba(255,255,255,.85); }
+  .opts input:checked + span { background: var(--accent); color: #241d05; border-color: var(--accent); font-weight: 500; }
+  .opts input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .reflect { border-top: 1px solid rgba(255,255,255,.12); margin-top: 6px; padding-top: 20px; }
+  p.note { font-size: 14px; color: rgba(255,255,255,.6); margin: -4px 0 18px; }
+  label.check { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: rgba(255,255,255,.7); margin: 4px 0 14px; }
+  label.check input { margin-top: 4px; accent-color: var(--accent); width: 17px; height: 17px; flex: none; }
+  button#btn { width: 100%; justify-content: center; }
+  button:disabled { opacity: .6; cursor: wait; }
+  .err { color: #ff9e8f; font-size: 14px; margin-top: 12px; display: none; }
+  .done { display: none; text-align: center; }
+  .done h3 { font-size: 30px; margin-bottom: 8px; }
+  .done p { color: rgba(255,255,255,.7); margin-bottom: 16px; }
+  .cal { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+  .cal a { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; font-weight: 500; border: 1px solid rgba(255,255,255,.3); border-radius: 2px; padding: 10px 15px; }
+  .hp { position: absolute; left: -9999px; }
+  footer { background: var(--ink); color: rgba(255,255,255,.5); font-size: 12.5px; padding: 26px 0 34px; border-top: 1px solid rgba(255,255,255,.08); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  footer a { color: rgba(255,255,255,.75); }
+
+  @media (max-width: 980px) { .hour { grid-template-columns: 1fr 1fr; } .fac-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 760px) {
+    .split { grid-template-columns: 1fr; }
+    .hero { padding-top: 46vh; min-height: 0; }
+    .hero .bg { bottom: auto; height: 62vh; background-position: 64% 20%; }
+    .hero::after { background: linear-gradient(to bottom,rgba(27,27,27,.1) 0,rgba(27,27,27,.25) 30vh,var(--ink) 62vh); }
+    .nav-cta { display: none; }
+    .pair { grid-template-columns: 1fr; } .pair .mid { transform: rotate(90deg); }
+    .fac { grid-template-columns: 110px 1fr; gap: 16px; } .fac img { width: 110px; }
+  }
+  @media (max-width: 520px) { .hour { grid-template-columns: 1fr; } .l2 { grid-template-columns: 1fr; } .l2 img:last-child { display: none; } }
+</style>
+<link rel="canonical" href="https://level2.yanivrose.com/somatic-inquiry/">
+<script src="assets/analytics.js" defer></script>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="#top"><span class="chev" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span>KENAZ <span class="tag">Webinar</span></a>
+  <a class="nav-cta" href="#seat" data-cta="nav_save_seat">Save my seat</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="bg" role="img" aria-label="A woman breathing with her hand on her chest, eyes closed"></div>
+  <div class="wrap"><div class="hero-col">
+    <span class="eyebrow on-dark">Free live webinar · For breathwork facilitators</span>
+    <h1>Somatic Inquiry for Breathwork Facilitators</h1>
+    <p class="sub">When a client says &ldquo;it's anxiety&rdquo;, the label can end the conversation. Learn a simple way to guide them back to what they actually feel, and practise it live.</p>
+    <div class="hero-tag"><span class="dot"></span>Sunday 22 November <span class="sep">·</span> 7am Costa Rica <span class="sep">·</span> 2pm CET <span class="sep">·</span> 8pm Thailand</div>
+    <p class="local" id="local"></p>
+    <div class="hero-actions">
+      <a class="btn" href="#seat" data-cta="hero_save_seat">Save my seat <span class="arr">→</span></a>
+      <span class="micro"><b>Free</b> · 1 hour · online</span>
+    </div>
+  </div></div>
+</header>
+
+<section id="for-you">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Is this for you?</span>
+      <h2>For the moment after the breath, when something is <em class="cap">STILL</em> there.</h2>
+      <ul class="check">
+        <li><span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span><span>A client finishes a session in a challenging place, and you're not sure how to hold them.</span></li>
+        <li><span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span><span>They name it (&ldquo;fear&rdquo;, &ldquo;anxiety&rdquo;, &ldquo;my trauma&rdquo;) and the story takes over from the body.</span></li>
+        <li><span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span><span>You worry that focusing on a hard sensation will only make it stronger.</span></li>
+        <li><span class="chev" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24"><path d="M12.5 4.5 6.5 12l6 7.5M19 4.5 13 12l6 7.5"/></svg></span><span>You want a few clear questions you can trust, without fixing, pushing or analysing.</span></li>
+      </ul>
+    </div>
+    <div class="media"><img src="hands-on.jpg" alt="Patricia guiding a participant during a breathwork session" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="shift on-dark">
+  <div class="bg" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow">The tool</span>
+    <h2>Set the label aside. Stay with the experience.</h2>
+    <p class="body">It sounds backwards: turning toward a hard sensation tends to settle it rather than make it bigger. When a feeling is met with attention and breath, instead of a story about it, it often softens, moves and makes room. We'll show you why, and how to guide someone there.</p>
+    <div class="pair">
+      <div class="side before"><div class="lbl">The interpretation</div><q>I feel anxious. It's the same fear that always comes.</q></div>
+      <div class="mid" aria-hidden="true">→</div>
+      <div class="side after"><div class="lbl">The experience</div><q>There's a tight band across my chest. It's warm, and it pulses when I breathe in.</q></div>
+    </div>
+  </div>
+</section>
+
+<section id="hour">
+  <div class="wrap">
+    <span class="eyebrow">The hour</span>
+    <h2>Short on theory, long on practice.</h2>
+    <p class="lead">You'll practise in pairs, guiding and being guided, so you leave with something you've already used.</p>
+    <div class="hour">
+      <div class="step"><span class="n">01 · Why</span><h3>Naming isn't feeling</h3><p>What happens when we interpret a sensation, and why attention to the raw experience regulates instead of escalating.</p></div>
+      <div class="step"><span class="n">02 · How</span><h3>The felt sense</h3><p>The qualities a sensation can have, such as location, shape, temperature, texture and movement, and the questions that bring them into focus.</p></div>
+      <div class="step do"><span class="n">03 · Practise</span><h3>In pairs</h3><p>Breakout rooms with simple prompts. You guide, you're guided, and you notice what shifts.</p></div>
+      <div class="step"><span class="n">04 · Deeper</span><h3>When it's a part</h3><p>A short look at how a sensation can be a part that wants to be seen, and where parts work takes this further.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="prompts" style="padding-top:0">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">A taste</span>
+      <h2>A few of the questions we'll work with.</h2>
+      <p class="lead">Simple enough to use the same evening, with any client, after any session.</p>
+    </div>
+    <ul class="prompts">
+      <li>Where do you notice it in your body right now?</li>
+      <li>If you set the word &ldquo;anxiety&rdquo; aside for a moment, what's actually there?</li>
+      <li>Does it have a shape, a temperature, an edge?</li>
+      <li>What happens when you breathe toward it?</li>
+    </ul>
+  </div>
+</section>
+
+<section class="hosts-sec">
+  <div class="rule"></div>
+  <div class="wrap">
+    <span class="eyebrow">Your hosts</span>
+    <h2>Meet Patricia and Yaniv.</h2>
+    <div class="fac-grid">
+      <div class="fac"><img src="patricia.jpg" alt="Patricia Udipti" loading="lazy"><div><div class="name">Patricia Udipti</div><div class="role">Breathwork &amp; Ceremony · Founder of KENAZ</div><p class="bio">Brazilian-born, based in Koh Phangan, with 5+ years guiding group work and ceremonies across Europe and Asia. Her lineage in Rebirthing breathwork, bioenergetics, active meditation and energy healing is the work behind KENAZ and its 200-hour trauma-aware facilitator training.</p></div></div>
+      <div class="fac"><img src="yaniv.jpg" alt="Yaniv Rose" loading="lazy"><div><div class="name">Yaniv Rose</div><div class="role">Relational Alchemist</div><p class="bio">Certified Authentic Relating Facilitator and L2 Internal Family Systems Practitioner with 5 years' experience, privileged to have empowered thousands in relational wholeness, through self-expression and embracing all our parts.</p></div></div>
+    </div>
+    <div class="l2">
+      <img src="g-dance.jpg" alt="Participants moving during a breathwork session" loading="lazy">
+      <img src="g-candles.jpg" alt="A candlelit circle in the KENAZ practice space" loading="lazy">
+    </div>
+    <div class="l2note">
+      <p>This webinar draws on <b style="font-weight:500;color:var(--fg)">Facilitation Mastery</b>, our two-week Level 2 training in Chiang Mai, Thailand (6–20 January 2027), followed by six months online. Open to facilitators, by application. We'll share a little about it at the end.</p>
+      <a href="../" data-cta="footer_level2">About Level 2 →</a>
+    </div>
+  </div>
+</section>
+
+<section class="seat on-dark" id="seat">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Save your seat</span>
+      <h2>Join us live on 22 November.</h2>
+      <p class="lead">It's free. We'll email you the link before we start, and you can add it to your calendar now. Can't make it live? Tick the box and we'll send you the recording.</p>
+      <div class="when">
+        <div>Sunday 22 November <span>7am Costa Rica · 8am New York</span></div>
+        <div>Same hour in Europe <span>1pm UK · 2pm CET</span></div>
+        <div>Same hour in Asia <span>8pm Thailand · 9pm Bali</span></div>
+        <div>Online · 1 hour <span>Live video call</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <form id="f" novalidate>
+        <h2 class="t">Your details</h2>
+        <label class="f" for="name">First name</label>
+        <input id="name" name="name" type="text" autocomplete="given-name" required>
+        <label class="f" for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required>
+        <input class="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="reflect">
+          <h2>Help us shape it</h2>
+          <p class="note">Optional, and only Patricia and Yaniv will read it.</p>
+          <fieldset>
+            <legend>How long have you been facilitating?</legend>
+            <div class="opts">
+              <label><input type="radio" name="experience" value="not yet"><span>Not yet</span></label>
+              <label><input type="radio" name="experience" value="under 1 year"><span>Under 1 year</span></label>
+              <label><input type="radio" name="experience" value="1-3 years"><span>1–3 years</span></label>
+              <label><input type="radio" name="experience" value="3+ years"><span>3+ years</span></label>
+            </div>
+          </fieldset>
+          <label class="f" for="question">A moment with a client you'd like help with</label>
+          <textarea id="question" name="question" maxlength="1000" placeholder="e.g. Someone was shaking after the session and kept saying it was fear..."></textarea>
+        </div>
+
+        <label class="check"><input type="checkbox" name="recording" value="yes"> I can't make it live. Please send me the recording.</label>
+        <label class="check"><input type="checkbox" name="consent" required> Email me the webinar link and updates about KENAZ trainings. Unsubscribe any time.</label>
+        <button class="btn" id="btn" type="submit">Save my seat</button>
+        <p class="err" id="err" role="alert"></p>
+      </form>
+
+      <div class="done" id="done">
+        <h3 id="done-h">You're in</h3>
+        <p id="done-p">We'll email you the link before we start (check promotions or spam if you don't see it). Add it to your calendar now so it doesn't slip:</p>
+        <div class="cal" id="cal">
+          <a id="gcal" target="_blank" rel="noopener" data-cta="gcal">Google Calendar</a>
+          <a href="cal/somatic-inquiry.ics" data-cta="ics">Apple / Outlook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>KENAZ · Patricia Udipti &amp; Yaniv Rose</span><a href="../">About Level 2 →</a></div></footer>
+<script>
+  const START = new Date("2026-11-22T13:00:00Z"), END = new Date("2026-11-22T14:00:00Z");
+  let when = "";
+  try {
+    when = START.toLocaleString(undefined, { weekday: "long", day: "numeric", month: "long", hour: "numeric", minute: "2-digit", timeZoneName: "short" });
+    document.getElementById("local").textContent = "Your time: " + when;
+  } catch {}
+  const fmt = d => d.toISOString().replace(/[-:]|\.\d{3}/g, "");
+  document.getElementById("gcal").href = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+    "&text=" + encodeURIComponent("Somatic Inquiry for Breathwork Facilitators (Patricia & Yaniv)") +
+    "&dates=" + fmt(START) + "/" + fmt(END) +
+    "&details=" + encodeURIComponent("Free live webinar. The video link will be emailed to you before we start. https://level2.yanivrose.com/somatic-inquiry/") +
+    "&location=" + encodeURIComponent("Online (link by email)");
+
+  const f = document.getElementById("f"), btn = document.getElementById("btn"), err = document.getElementById("err");
+  function fail(msg) { err.textContent = msg; err.style.display = "block"; btn.disabled = false; btn.textContent = "Save my seat"; }
+  const track = (n, p) => { try { window.track && window.track(n, Object.assign({ page: "somatic" }, p || {})); } catch {} };
+  f.addEventListener("focusin", () => track("form_start"), { once: true });
+  f.addEventListener("submit", async (e) => {
+    e.preventDefault(); err.style.display = "none";
+    const d = Object.fromEntries(new FormData(f));
+    if (!d.name?.trim()) return fail("Please add your first name.");
+    if (!/^\S+@\S+\.\S+$/.test(d.email || "")) return fail("Please check your email address.");
+    if (!d.consent) return fail("Please tick the box so we can email you the link.");
+    d.when = when;
+    btn.disabled = true; btn.textContent = "Saving…";
+    try {
+      const r = await fetch("https://somatic-inquiry.pages.dev/api/subscribe", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(d) });
+      if (!r.ok) throw new Error();
+      track("signup_submitted", { mode: d.recording ? "recording" : "live" });
+      if (d.recording) {
+        document.getElementById("done-h").textContent = "We'll send it to you";
+        document.getElementById("done-p").textContent = "We'll email you the recording after the session. If your plans change, the link to join live will be in your inbox too.";
+        document.getElementById("cal").style.display = "none";
+      }
+      f.style.display = "none"; document.getElementById("done").style.display = "block";
+      document.getElementById("done").scrollIntoView({ behavior: "smooth", block: "center" });
+    } catch { track("signup_error"); fail("Something went wrong. Please try again, or email me@yanivrose.com and we'll add you."); }
+  });
+</script>
+</body>
+</html>
